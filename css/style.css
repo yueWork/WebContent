@@ -57,6 +57,14 @@ h1.navbar-brand {
     font-family: 'Marvel-Regular';
     padding: 0.5em 1em 0 0;
 }
+h1.navbar-brand1 {
+  /*   font-size: 3em; */
+/*     font-family: 'Marvel-Regular'; */
+	padding: 0.25em 1em 0 0; 
+/*     position: absolute;
+  	left: 0px;
+  	top: 0px; */
+}
 h1.navbar-brand a {
     color: #fff;
     padding: 0.2em 0;
@@ -385,7 +393,6 @@ input:focus {
 .banner {
     position: relative;
     background-color: #f2f6f7;
-    padding: 12em 0 0;
     min-height: 600px;
 }
 .banner img {
@@ -417,7 +424,7 @@ input:focus {
     font-size: 1.5em;
     color:#5D4B33;
     font-weight: 800;
-    padding: 0.5em 3em;
+/*     padding: 0.5em 3em; */
     border: 7px solid #5D4B33;
 }
 .banner a:hover {
@@ -591,7 +598,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 /*--subscribe--*/
 .subscribe{
 	background:url(../images/slid.jpg)no-repeat 0px 0px fixed;
-	background-size:cover;
+	background-size:cover; 
 	text-align:center;
 	padding:7em 0;
 }
@@ -639,7 +646,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 /*--footer--*/
 .footer {
     padding: 5em 0;
-	background-color: #f2f6f7;
+	background-color: #f2f6f7;	
 }
 .footer-grid h4 {
     font-size: 2em;
@@ -656,7 +663,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
     color: #F07818;
 }
 .footer-grid ul li a {
-    font-size: 1em;
+    font-size: 2em;
     text-decoration: none;
     line-height: 2em;
     color: #999;
@@ -684,6 +691,10 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 .footer-bottom p a:hover {
     color: #fff;
     text-decoration: underline;
+}
+.footer-grids{
+	position:relative;
+	left:400px;
 }
 /*--//footer--*/
 /*--products--*/
@@ -2060,7 +2071,7 @@ span.glyphicon.glyphicon-map-marker {
 }
 .banner {
     min-height: 500px;
-	padding: 11em 0 0;
+/* 	padding: 11em 0 0; */
 }
 .banner {
     min-height: 550px;
@@ -2168,12 +2179,12 @@ h2 {
 }
 .banner a {
     font-size: 1.2em;
-    padding: 0.5em 2em;
+/*     padding: 0.5em 2em; */
     border: 5px solid #5D4B33;
 }
 .banner {
     min-height: 495px;
-	padding: 10em 0 0;
+/* 	padding: 10em 0 0; */
 }
 .banner-text {
     top: 25%;
@@ -2237,7 +2248,7 @@ h1.navbar-brand {
 }
 .banner {
     min-height: 440px;
-    padding: 7em 0 0;
+/*     padding: 7em 0 0; */
 }
 .gallery-grid.glry-one {
     padding: 0;
@@ -2454,11 +2465,11 @@ h1.navbar-brand {
 }
 .banner p {
     letter-spacing: 3px;
-	margin: 1em 0 2.5em;
+/* 	margin: 1em 0 2.5em; */
 }
 .banner {
     min-height: 380px;
-    padding: 7em 0 0;
+/*     padding: 0em 0 0; */
 }
 .gallery {
     padding: 1em 0;
@@ -2648,7 +2659,7 @@ button.navbar-toggle {
 }
 .banner {
     min-height: 280px;
-    padding: 5em 0 0;
+    /* padding: 5em 0 0; */
 }
 .gallery {
     padding: 0;
@@ -2835,6 +2846,9 @@ h2 {
 .footer-bottom {
     padding: 1.5em 0;
 }
+.footer-link a:link{
+	color:rgb(236,99,0)
+}
 button.navbar-toggle {
     margin-right: 14em;
 }
@@ -2861,7 +2875,7 @@ button.navbar-toggle {
 .banner a {
     font-size: 0.85em;
     border: 3px solid #5D4B33;
-    padding: 0.5em 1.5em;
+/*     padding: 0.5em 1.5em; */
 }
 .gallery-grid.glry-one .gallery-info {
     bottom: 21%;
@@ -3120,7 +3134,7 @@ h1.navbar-brand {
 }
 .banner a {
     font-size: 0.8em;
-    padding: 0.4em 1.5em;
+/*     padding: 0.4em 1.5em; */
 }
 .banner-text {
     top: 45%;
@@ -3129,7 +3143,7 @@ h1.navbar-brand {
 }
 .banner {
     min-height: 210px;
-    padding: 3em 0 0;
+/*     padding: 3em 0 0; */
 }
 .gallery-grids {
     margin-top: 1.5em;
