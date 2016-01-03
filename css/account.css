@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.faqa a{
+	font-size: 2em;
+    text-decoration: none;
+    line-height: 2em;
+    color: #999;
+    list-style: none;
+    text-transform: capitalize;
+}
+.faqa a:hover{
+	 color: #F07818;
+}
