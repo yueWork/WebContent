@@ -11,6 +11,7 @@
 <!-- //Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/account.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
@@ -97,20 +98,9 @@
 				<!--//navbar-header-->
 			</nav>
 			<div class="header-info">
-				<div class="header-right search-box">
-					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
-					<div class="search">
-						<form class="navbar-form">
-							<input type="text" class="form-control">
-							<button type="submit" class="btn btn-default" aria-label="Left Align">
-								Search
-							</button>
-						</form>
-					</div>	
-				</div>
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<div id="loginBox">                
+					<div id="loginBox" style="right:16%;">                
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
@@ -130,7 +120,7 @@
 				</div>
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-					<div class="cart-box">
+					<div class="cart-box" style="right:10.5%;">
 						<h4><a href="checkout.html">
 							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
 						</a></h4>
@@ -138,7 +128,7 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				<div class="clearfix"> </div>
+				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -195,18 +185,15 @@
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-2 footer-grid">
-					<ul>
-						<li><a href="support.html">帮助</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grid icons">
-					<ul>
-						<li><a href="#">FAQ</a></li>
-					</ul>
-				</div>
-			</div>
+			<table style="width: 100%">
+					<tr>
+					<td style="width: 25%"></td>
+					<td style="width: 25%" class="faqa"><a href="support.html"  style="float:left;">帮助</a></td>
+					<td style="width: 25%" class="faqa"><a href="#" style="float:right;">FAQ</a></td>
+					<td style="width: 25%"></td>
+					</tr>
+				</table>	
+
 		</div>
 	</div>
 	</div>

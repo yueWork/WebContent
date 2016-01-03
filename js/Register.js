@@ -1,5 +1,6 @@
 function Register() {
 	console.log("test");
+<<<<<<< HEAD
 	var userName = $("#userName").val();
 	var phone = $("#phone").val();
 	var email = $("#email1").val();
@@ -23,4 +24,16 @@ function Register() {
 	} else
 		console.log("存在参数为空");
 
+=======
+	var username=$("#userName").val();
+
+	console.log(username);
+	$.ajax({
+		url:"/BookStore/Register?userName="+username+"&phone="+phone+"&email="+email+"&password0="+password0+"&password1="+password1,
+		contentType:"text/json;charset=utf-8",
+		type:"POST",		
+		success:function(data){	
+		}
+	});
+>>>>>>> origin/master
 }
