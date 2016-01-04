@@ -6,6 +6,7 @@
     color: #999;
     list-style: none;
     text-transform: capitalize;
+    border: 0px solid #5D4B33;
 }
 .faqa a:hover{
 	 color: #F07818;

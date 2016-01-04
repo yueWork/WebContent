@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.searchtype a{
+	font-size: 1.5em;
+    color: #5D4B33;
+    font-weight: 800;
+    /* padding: 0.5em 3em; */
+    border: 0px solid #5D4B33;
+    text-decoration:none;
+}
+.searchtype a:hover{
+	border-color: #F07818;
+    color: #F07818;
+    text-decoration:none;
+}

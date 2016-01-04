@@ -623,7 +623,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
     float: left;
     background-color: rgba(251, 250, 250, 0.2);
 }
-.subscribe form input[type="submit"] {
+.subscribe form input[type="button"] {
     outline: none;
     border: 1px solid #F07818;
     width: 25%;
@@ -638,7 +638,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-.subscribe form input[type="submit"]:hover {
+.subscribe form input[type="button"]:hover {
     background-color: rgba(255, 255, 255, 0.21);
     color: #F07818;
 }
@@ -2546,7 +2546,7 @@ button.btn.btn-default {
     font-size: 0.9em;
     padding: 0.9em;
 }
-.subscribe form input[type="submit"] {
+.subscribe form input[type="button"] {
     padding: 0.8em;
 	font-size: 0.9em;
 }
@@ -2920,7 +2920,7 @@ button.navbar-toggle {
     width: 74%;
     font-size: 0.85em;
 }
-.subscribe form input[type="submit"] {
+.subscribe form input[type="button"] {
     padding: 0.95em;
     font-size: 0.8em;
 }
@@ -3183,7 +3183,7 @@ h1.navbar-brand {
 .subscribe form input[type="text"] {
     width: 68%;
 }
-.subscribe form input[type="submit"] {
+.subscribe form input[type="button"] {
     width: 32%;
 }
 .footer {
