@@ -8,13 +8,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 <script type="application/x-javascript">
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
 </script>
 <!-- //Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/account.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/account.css" type="text/css" rel="stylesheet"
+	media="all">
 <link href="css/index.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
@@ -70,21 +73,16 @@
 											<li><a class="list" href="books.html">Butterscotch</a></li>
 											<li><a class="list" href="books.html">Strawberry</a></li>
 											<li><a class="list" href="books.html">Vanilla</a></li>
-											<li><a class="list" href="books.html">Eggless
-													Cakes</a></li>
+											<li><a class="list" href="books.html">Eggless Cakes</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>By Theme</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Heart
-													shaped</a></li>
-											<li><a class="list" href="books.html">Cartoon
-													Cakes</a></li>
-											<li><a class="list" href="books.html">2-3 Tier
-													Cakes</a></li>
-											<li><a class="list" href="books.html">Square
-													shape</a></li>
+											<li><a class="list" href="books.html">Heart shaped</a></li>
+											<li><a class="list" href="books.html">Cartoon Cakes</a></li>
+											<li><a class="list" href="books.html">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="books.html">Square shape</a></li>
 											<li><a class="list" href="books.html">Round shape</a></li>
 											<li><a class="list" href="books.html">Photo cakes</a></li>
 										</ul>
@@ -107,7 +105,8 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<a href="#" id="user"><span class="glyphicon glyphicon-user"
+						aria-hidden="true"></span></a>
 					<div id="loginBox" style="right:16%;">                
 						<form id="loginForm">
 							<fieldset id="body">
@@ -128,13 +127,19 @@
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-					<div class="cart-box" style="right:10.5%;">
-						<h4><a href="checkout.html">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
-						<div class="clearfix"> </div>
+					<a href="#"><span class="glyphicon glyphicon-shopping-cart"
+						aria-hidden="true"></span></a>
+					<div class="cart-box" style="right: 10.5%;">
+						<h4>
+							<a href="checkout.html"> <span class="simpleCart_total">
+									$0.00 </span> (<span id="simpleCart_quantity"
+								class="simpleCart_quantity"> 0 </span>)
+							</a>
+						</h4>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty">Empty cart</a>
+						</p>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -148,33 +153,37 @@
 		<div class="subscribe">
 			<div class="container">
 				<form>
-				<table style="width: 100%;">
-					<tr>
-						<td style="width: 20%;">
-							<div class="dropdown searchtype " ><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" id="selectsubject">书名<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-1">
-									<div class="row">
-										<h4 style="margin-left: 10px;">查找类别</h4>
-										<ul class="multi-column-dropdown">
-										<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">作者</a></li>
-										<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">书名</a></li>
-										<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">出版社</a></li>
-										<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">书籍编号</a></li>
-										</ul>																								
+					<table style="width: 100%;">
+						<tr>
+							<td style="width: 20%;">
+								<div class="dropdown searchtype ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"
+										id="selectsubject">书名<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-1">
+										<div class="row">
+											<h4 style="margin-left: 10px;">查找类别</h4>
+											<ul class="multi-column-dropdown">
+												<li class="searchtype"><a class="list"
+													style="margin-left: 10px;" onclick="select(this)">作者</a></li>
+												<li class="searchtype"><a class="list"
+													style="margin-left: 10px;" onclick="select(this)">书名</a></li>
+												<li class="searchtype"><a class="list"
+													style="margin-left: 10px;" onclick="select(this)">出版社</a></li>
+												<li class="searchtype"><a class="list"
+													style="margin-left: 10px;" onclick="select(this)">书籍编号</a></li>
+											</ul>
+										</div>
+									</ul>
 								</div>
-							</ul>
-							</div>
-						</td>
-						<td style="width: 55%;">
-							<input type="text" class="text" id="searchinput" style="width:100%;"> 
-						</td>
-						<td style="width: 25%;">
-							<input type="button" style="width:100%;" value="搜索" onclick="SearchBook()">
-						</td>
-					</tr>
-				</table>
-			
+							</td>
+							<td style="width: 55%;"><input type="text" class="text"
+								id="searchinput" style="width: 100%;"></td>
+							<td style="width: 25%;"><input type="button"
+								style="width: 100%;" value="搜索" onclick="SearchBook()">
+							</td>
+						</tr>
+					</table>
+
 				</form>
 			</div>
 		</div>
@@ -186,19 +195,21 @@
 		</div>
 	</div>
 	<!--//banner-->
-		<!--footer-->
+	<!--footer-->
 	<div class="footer">
-		<div class="container">			
-			<div class="row-fluid" >		
+		<div class="container">
+			<div class="row-fluid">
 				<table style="width: 100%">
 					<tr>
-					<td style="width: 25%"></td>
-					<td style="width: 25%" class="faqa"><a href="support.html"  style="float:left;">帮助</a></td>
-					<td style="width: 25%" class="faqa"><a href="FAQ.html" style="float:right;">FAQ</a></td>
-					<td style="width: 25%"></td>
+						<td style="width: 25%"></td>
+						<td style="width: 25%" class="faqa"><a href="support.html"
+							style="float: left;">帮助</a></td>
+						<td style="width: 25%" class="faqa"><a href="FAQ.html"
+							style="float: right;">FAQ</a></td>
+						<td style="width: 25%"></td>
 					</tr>
-				</table>	
-			</div>			
+				</table>
+			</div>
 		</div>
 	</div>
 	</div>
