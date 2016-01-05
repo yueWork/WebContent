@@ -13,9 +13,15 @@
 <!-- //Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
+<link href="css/index.css" type="text/css" rel="stylesheet"
+	media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/account.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/tb.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/sudyNav.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/UserInfo.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/index-min.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/index-min.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
@@ -40,90 +46,205 @@
 					</button>
 					<h1 class="navbar-brand1">
 						<img alt="书淘" src="images/book-logo.png">
-					</h1>
+					</h1> 
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index.html" class="active">首页</a></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle"
 							data-toggle="dropdown">分类<b class="caret"></b></a>
-							<ul class="dropdown-menu multi-column columns-4" style="min-width: 840px;">
-								<div class="row">
-									<div class="col-sm-2">
-										<h4>By Relation</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Friend</a></li>
-											<li><a class="list" href="books.html">Lover</a></li>
-											<li><a class="list" href="books.html">Sister</a></li>
-											<li><a class="list" href="books.html">Brother</a></li>
-											<li><a class="list" href="books.html">Kids</a></li>
-											<li><a class="list" href="books.html">Parents</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-2">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Chocolate</a></li>
-											<li><a class="list" href="books.html">Mixed Fruit</a></li>
-											<li><a class="list" href="books.html">Butterscotch</a></li>
-											<li><a class="list" href="books.html">Strawberry</a></li>
-											<li><a class="list" href="books.html">Vanilla</a></li>
-											<li><a class="list" href="books.html">Eggless
-													Cakes</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-2">
-										<h4>By Theme</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Heart
-													shaped</a></li>
-											<li><a class="list" href="books.html">Cartoon
-													Cakes</a></li>
-											<li><a class="list" href="books.html">2-3 Tier
-													Cakes</a></li>
-											<li><a class="list" href="books.html">Square
-													shape</a></li>
-											<li><a class="list" href="books.html">Round shape</a></li>
-											<li><a class="list" href="books.html">Photo cakes</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-2">
-										<h4>Weight</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">1 kG</a></li>
-											<li><a class="list" href="books.html">1.5 kG</a></li>
-											<li><a class="list" href="books.html">2 kG</a></li>
-											<li><a class="list" href="books.html">3 kG</a></li>
-											<li><a class="list" href="books.html">4 kG</a></li>
-											<li><a class="list" href="books.html">Large</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-2">
-										<h4>Weight</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">1 kG</a></li>
-											<li><a class="list" href="books.html">1.5 kG</a></li>
-											<li><a class="list" href="books.html">2 kG</a></li>
-											<li><a class="list" href="books.html">3 kG</a></li>
-											<li><a class="list" href="books.html">4 kG</a></li>
-											<li><a class="list" href="books.html">Large</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-2">
-										<h4>Weight</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">1 kG</a></li>
-											<li><a class="list" href="books.html">1.5 kG</a></li>
-											<li><a class="list" href="books.html">2 kG</a></li>
-											<li><a class="list" href="books.html">3 kG</a></li>
-											<li><a class="list" href="books.html">4 kG</a></li>
-											<li><a class="list" href="books.html">Large</a></li>
-										</ul>
-									</div>
-								</div>
-							</ul></li>
+							<ul class="submenumy dropdown-menu multi-column columns-1">
+								<li class="dropdown-submenu ">
+									<a tabindex="-1" href="#"  >文学</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">文学理论</a></li>
+										<li><a class="list" href="books.html">文学史</a></li>
+										<li><a class="list" href="books.html">综合文作集</a></li>
+										<li><a class="list" href="books.html">小说</a></li>
+										<li><a class="list" href="books.html">传记/书信</a></li>
+										<li><a class="list" href="books.html">散文随笔</a></li>
+										<li><a class="list" href="books.html">诗歌词曲</a></li>
+										<li><a class="list" href="books.html">世纪文学</a></li>
+										<li><a class="list" href="books.html">报告文学</a></li>
+										<li><a class="list" href="books.html">民间文学</a></li>
+										<li><a class="list" href="books.html">戏曲/戏剧</a></li>
+										<li><a class="list" href="books.html">汉语言文学</a></li>
+										<li><a class="list" href="books.html">综合文作集</a></li>
+										<li><a class="list" href="books.html">新闻传播</a></li>
+										<li><a class="list" href="books.html">网络小说</a></li>
+										<li><a class="list" href="books.html">世界名著</a></li>
+										<li><a class="list" href="books.html">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">计算机</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">基础知识</a></li>
+										<li><a class="list" href="books.html">操作系统</a></li>
+										<li><a class="list" href="books.html">数据库</a></li>
+										<li><a class="list" href="books.html">编程语言</a></li>
+										<li><a class="list" href="books.html">web技术</a></li>
+										<li><a class="list" href="books.html">网页设计</a></li>
+										<li><a class="list" href="books.html">网络/通信/安全</a></li>
+										<li><a class="list" href="books.html">电子商务</a></li>
+										<li><a class="list" href="books.html">多媒体</a></li>
+										<li><a class="list" href="books.html">图形/图像</a></li>
+										<li><a class="list" href="books.html">计算机辅助</a></li>
+										<li><a class="list" href="books.html">软件技术/工程</a></li>
+										<li><a class="list" href="books.html">3DS MAX</a></li>
+										<li><a class="list" href="books.html">信息管理</a></li>
+										<li><a class="list" href="books.html">计算机硬件</a></li>
+										<li><a class="list" href="books.html">人工智能</a></li>
+										<li><a class="list" href="books.html">办公/文字</a></li>
+										<li><a class="list" href="books.html">等级/认证</a></li>
+										<li><a class="list" href="books.html">Maya影视</a></li>
+										<li><a class="list" href="books.html">AutoCAD</a></li>
+										<li><a class="list" href="books.html">ERP技术</a></li>
+										<li><a class="list" href="books.html">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">经管</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">理论/方法</a></li>
+										<li><a class="list" href="books.html">财政金融</a></li>
+										<li><a class="list" href="books.html">贸易经济</a></li>
+										<li><a class="list" href="books.html">知识经济</a></li>
+										<li><a class="list" href="books.html">经济/体制</a></li>
+										<li><a class="list" href="books.html">市场营销</a></li>
+										<li><a class="list" href="books.html">人力资源</a></li>
+										<li><a class="list" href="books.html">财务管理</a></li>
+										<li><a class="list" href="books.html">商业文秘</a></li>
+										<li><a class="list" href="books.html">商务谈判</a></li>
+										<li><a class="list" href="books.html">企划广告</a></li>
+										<li><a class="list" href="books.html">公共关系</a></li>
+										<li><a class="list" href="books.html">股票证券期货</a></li>
+										<li><a class="list" href="books.html">餐饮/旅游</a></li>
+										<li><a class="list" href="books.html">房地产/物业</a></li>
+										<li><a class="list" href="books.html">工商管理</a></li>
+										<li><a class="list" href="books.html">电子商务</a></li>
+										<li><a class="list" href="books.html">物流管理</a></li>
+										<li><a class="list" href="books.html">行政管理</a></li>
+										<li><a class="list" href="books.html">经济学</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">外语</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">工具书</a></li>
+										<li><a class="list" href="books.html">英语教材</a></li>
+										<li><a class="list" href="books.html">剑桥商务</a></li>
+										<li><a class="list" href="books.html">日语</a></li>
+										<li><a class="list" href="books.html">国内考试</a></li>
+										<li><a class="list" href="books.html">出国考试</a></li>
+										<li><a class="list" href="books.html">专业读物</a></li>
+										<li><a class="list" href="books.html">英语文学</a></li>
+										<li><a class="list" href="books.html">其他语言</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">建筑</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">测绘</a></li>
+										<li><a class="list" href="books.html">土木</a></li>
+										<li><a class="list" href="books.html">力学</a></li>
+										<li><a class="list" href="books.html">城市规划</a></li>
+										<li><a class="list" href="books.html">设计</a></li>
+										<li><a class="list" href="books.html">预算</a></li>
+										<li><a class="list" href="books.html">环境</a></li>
+										<li><a class="list" href="books.html">建筑材料</a></li>
+										<li><a class="list" href="books.html">消防</a></li>
+										<li><a class="list" href="books.html">路桥</a></li>
+										<li><a class="list" href="books.html">给排水</a></li>
+										<li><a class="list" href="books.html">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">法律</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">法学理论</a></li>
+										<li><a class="list" href="books.html">中国法律</a></li>
+										<li><a class="list" href="books.html">案例</a></li>
+										<li><a class="list" href="books.html">中国司法制度</a></li>
+										<li><a class="list" href="books.html">外国法律</a></li>
+										<li><a class="list" href="books.html">国际法</a></li>
+										<li><a class="list" href="books.html">日常生活与法律</a></li>
+										<li><a class="list" href="books.html">普法教育</a></li>
+										<li><a class="list" href="books.html">律师及资格考试</a></li>
+										<li><a class="list" href="books.html">工具书</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">艺术</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">艺术理论</a></li>
+										<li><a class="list" href="books.html">绘画</a></li>
+										<li><a class="list" href="books.html">音乐</a></li>
+										<li><a class="list" href="books.html">艺术设计</a></li>
+										<li><a class="list" href="books.html">动漫/网游</a></li>
+										<li><a class="list" href="books.html">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">考试</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">研究生考试</a></li>
+										<li><a class="list" href="books.html">公务员考试</a></li>
+										<li><a class="list" href="books.html">自学考试</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">电子</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">单片机</a></li>
+										<li><a class="list" href="books.html">电子信息</a></li>
+										<li><a class="list" href="books.html">电气/电器</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">机械</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">机电一体化</a></li>
+										<li><a class="list" href="books.html">机械制造</a></li>
+										<li><a class="list" href="books.html">工程图学</a></li>
+										<li><a class="list" href="books.html">工业技术</a></li>
+										<li><a class="list" href="books.html">汽车</a></li>
+										<li><a class="list" href="books.html">自动化</a></li>
+										<li><a class="list" href="books.html">模具</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">生化</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">生物化学</a></li>
+										<li><a class="list" href="books.html">医药学</a></li>
+										<li><a class="list" href="books.html">化工</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">教育</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">心理学</a></li>
+										<li><a class="list" href="books.html">哲学</a></li>
+										<li><a class="list" href="books.html">教育学</a></li>
+										<li><a class="list" href="books.html">思想政治</a></li>
+										<li><a class="list" href="books.html">新闻传播</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">环境</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" href="books.html">环境</a></li>
+										<li><a class="list" href="books.html">天文</a></li>
+										<li><a class="list" href="books.html">地理</a></li>
+									</ul>
+								</li>
+							</ul>						
+						</li>
+					</ul>
 				</div>
 				<!--//navbar-header-->
 			</nav>
@@ -166,36 +287,61 @@
 	<!--//header-->
 	<!--banner-->
 	<div class="banner">
-	<div class="theme-morning hp-common-header">
-		<div class="container">
-			<div class="row" style="margin-top: 10px;">
-				<h4 style="margin-left:auto;margin-right: auto; margin-bottom:0px; width: 990px;"><a style="border:0px;">个人主页</a></h4>
-			</div>
-			<div class="row">
-				<div class="cm-bd">
-					<div class="hp-user-info">
-						<div class="hd">
-							<img class="user-pic" src="images/tbuser.jpg">
-						</div>
-						<div class="bd">
-							<div class="info">
-								<p class="line"><strong class="name">用户名</strong></p>
-								<p class="line"></p>
-								<div class="line">性别</div>
+		<div class="header">
+			<div class="theme-morning hp-common-header">
+				<div class="row" style="margin-top: 0px;">
+					<h4
+						style="margin-left: auto; margin-right: auto; margin-bottom: 0px; width: 990px;">
+						<a style="border: 0px;">个人主页</a>
+					</h4>
+				</div>
+				<div class="row">
+					<div class="cm-bd" style="margin-top: 15px;">
+						<div class="hp-user-info">
+							<div class="hd">
+								<img class="user-pic" src="images/tbuser.jpg">
 							</div>
-							<div class="sns">
-								<p class="line edit-btn" style="letter-spacing: 0px;">
-									<a class="edit" style="font-size: 14px;border: 0px;">编辑资料</a>
-								</p>
+							<div class="bd">
+								<div class="info">
+									<p class="line">
+										<strong class="name">用户名</strong>
+									</p>
+									<p class="line"></p>
+									<div class="line">性别&nbsp;&nbsp;&nbsp;&nbsp;年龄</div>
+								</div>
+								<div class="sns">
+									<p class="line edit-btn" style="letter-spacing: 0px;">
+										<a class="edit" style="font-size: 14px; border: 0px;">编辑资料</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cm-ft" style="margin-top: 13px;">
+						<div class="hp-nav">
+							<div class="hd">
+								<p class="greeting" id="J_HomePageGreeting" style="margin: 0px;"></p>
+							</div>
+							<div class="bd">
+								<ul class="nav-list" style="list-style: none;">
+									<li class="nav-item"><a class="nav-link s-active"
+										style="border: 0px;">我的主页</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="content">
+			<div class="content-box clearfix">
+				<div class="content-box-item content-box-left" data-spm="3">
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--//banner-->
+	
 		<!--footer-->
 	<div class="footer">
 		<div class="container">

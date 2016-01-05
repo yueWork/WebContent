@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+.submenumy > li >a:hover,
+.submenumy > li >a:focus{
+	background-color:#ec6300!important;
+	color:#ff0088cc;
+}
