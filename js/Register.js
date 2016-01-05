@@ -1,5 +1,4 @@
 function Register() {
-	console.log("test");
 	var userName = $("#userName").val();
 	var phone = $("#phone").val();
 	var email = $("#email1").val();
@@ -20,16 +19,18 @@ function Register() {
 					contentType : "text/json;charset=utf-8",
 					type : "POST",
 					success : function(data) {
-						var msg = data.msg;
+						var msg = data[0].msg;
+						var state = data[1].state
 						console.log(msg);
 						$("#msg").html(msg);
+						if(state=='0')
+							window.location.href="/BookStore/index.html";
 					}
 				});
 			else {
 				console.log("密码不一致");
 				var msg = "密码不一致";
 				$("#msg").html(msg);
-
 			}
 		} else {
 			console.log("密码必须不少于6位");
