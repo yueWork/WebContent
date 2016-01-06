@@ -35,20 +35,14 @@ var html1 = '<form id="loginForm">'
 		+ '</fieldset>'
 		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > +'</form>';
 
-var html2 ='<li id="loginForm1">'
-	+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > 
-+'</li>'
-
-//		var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045">'
-//		+ '<div class="menu-hd J_MenuMyTaobao">'
-//		+ '<a href="//i.taobao.com/my_taobao.htm" target="_top">我的淘宝</a>'
-//		+ '<span class="arrow-icon-wrapper"><span class="g-icon arrow-icon"></span></span></div>'
-//		+ '<div class="menu-bd menu-list"><div class="menu-bd-panel">'
-//		+ '<a href="//buyertrade.taobao.com/trade/itemlist/list_bought_items.htm" target="_top">已买到的宝贝</a>'
-//		+ '<a href="//lu.taobao.com/newMyPath.htm" target="_top">我的足迹</a>'
-//		+ '<a href="//guang.taobao.com/?scm=2022.1.1.1" target="_top">爱逛街 <em class="J_GuangCount guang-count"></em></a>'
-//		+ '<a href="//daren.taobao.com/" target="_top">淘宝达人</a>'
-//		+ '<a href="//love.taobao.com/" target="_top">新欢</a></div></div></li>'
+var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045"  style="list-style: none !important;">'
+	+'<div class="background_user" style="background-color:rgb(255,255,255);width:200%" >'
+	+'<ul class="multi-column-dropdown"style="width:100%; margin:0 auto;">'
+		+'<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="select(this)">主页</a></li>'
+		+'<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="Logout()">退出</a></li>'
+	+'</ul>'
+	+'</div>'
+	+'</li>'
 function Login() {
 	var email = $("#email").val();
 	var password = $("#password").val();
@@ -66,13 +60,14 @@ function Login() {
 		console.log(cookie_uname);
 		console.log(cookie_email);
 		console.log(cookie_password);
+//		$("#loginBox").empty();
 		$("#loginBox").html(html2);
 	} else {
 		console.log("为空");
 		if (email.length != 0 && password.length != 0) {
 			$.ajax({
 				url : "/BookStore/Login?email=" + email + "&password="
-						+ password,
+						+ password + "&remember_flag=" + remember_flag,
 				contentType : "text/json;charset=utf-8",
 				type : "POST",
 				success : function(data) {
@@ -90,3 +85,4 @@ function Login() {
 		}
 	}
 }
+$(document).ready(Login());
