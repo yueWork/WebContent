@@ -12,8 +12,8 @@ var html1 = '<form id="loginForm">'
 		+ '<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>'
 		+ '<a>ddd</a>'
 		+ '</fieldset>'
-		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > +'</form>';
-
+		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>'
+	+'</form>';
 
 function Logout(){
 	$("#loginBox").html(html1);
