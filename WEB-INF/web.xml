@@ -38,4 +38,12 @@
 		<servlet-name>Search</servlet-name>
 		<url-pattern>/Search</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserInfo</servlet-name>
+		<servlet-class>com.org.UserInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserInfo</servlet-name>
+		<url-pattern>/UserInfo</url-pattern>
+	</servlet-mapping>
 </web-app>

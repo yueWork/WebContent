@@ -35,11 +35,17 @@ var html1 = '<form id="loginForm">'
 		+ '</fieldset>'
 		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > +'</form>';
 
-var html2 ='<li id="loginForm1">'
-	+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > 
-+'</li>'
-
-//		var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045">'
+		var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045">'
+			+'<div>'
+			+'<ul class="multi-column-dropdown" style="list-style: none !important;">'
+				+'<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">作者</a></li>'
+				+'<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">书名</a></li>'
+				+'<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">出版社</a></li>'
+				+'<li class="searchtype"><a class="list" style="margin-left: 10px;" onclick="select(this)">书籍编号</a></li>'
+			+'</ul>'
+			+'</div>'
+			+'</li>'
+//		var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045" id="test">'
 //		+ '<div class="menu-hd J_MenuMyTaobao">'
 //		+ '<a href="//i.taobao.com/my_taobao.htm" target="_top">我的淘宝</a>'
 //		+ '<span class="arrow-icon-wrapper"><span class="g-icon arrow-icon"></span></span></div>'
@@ -71,7 +77,7 @@ function Login() {
 		console.log("为空");
 		if (email.length != 0 && password.length != 0) {
 			$.ajax({
-				url : "/BookStore/Login?email=" + email + "&password="
+				url : "/BookSystem/Login?email=" + email + "&password="
 						+ password,
 				contentType : "text/json;charset=utf-8",
 				type : "POST",
