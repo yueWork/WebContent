@@ -3344,5 +3344,8 @@ h2 {
     width: 97%;
     bottom: 17%;
 }
+.background_user{
+	background-color: rgb(255, 255, 255);
+}
 }
 /*--//responsive-design---*/
