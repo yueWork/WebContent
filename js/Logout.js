@@ -1,4 +1,8 @@
-var html1 = '<form id="loginForm">'
+
+function Logout(){
+	console.log($("#loginBox").html());
+	console.log("logout");
+	var html='<form id="loginForm">'
 		+ '<fieldset id="body">'
 		+ '<fieldset>'
 		+ '<label for="email">Email Address</label>'
@@ -14,16 +18,13 @@ var html1 = '<form id="loginForm">'
 		+ '</fieldset>'
 		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>'
 	+'</form>';
-
-function Logout(){
-	$("#loginBox").html(html1);
+	
+	$("#loginBox").html(html);
 	console.log("删除cookies");
 	delCookie("uid");
 	delCookie("uname");
 	delCookie("email");
-	delCookie("password");
-	
-	
+	delCookie("password");	
 }
 //删除cookie
 function delCookie(name){//为cookie name
