@@ -23,8 +23,8 @@ function Register() {
 						var state = data[1].state
 						console.log(msg);
 						$("#msg").html(msg);
-						if(state=='0')
-							window.location.href="/BookStore/index.html";
+						if (state == '0')
+							window.location.href = "/BookStore/index.html";
 					}
 				});
 			else {

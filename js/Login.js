@@ -1,3 +1,6 @@
+var User_uid = null;
+var User_uname = null;
+var User_email = null;
 // 获取cookie
 function getCookie(cookie_name) {
 	var allcookies = document.cookie;
@@ -18,31 +21,6 @@ function getCookie(cookie_name) {
 	}
 	return value;
 }
-var flag = true;
-var html1 = '<form id="loginForm">'
-		+ '<fieldset id="body">'
-		+ '<fieldset>'
-		+ '<label for="email">Email Address</label>'
-		+ '<input type="text" name="email" id="email">'
-		+ '</fieldset>'
-		+ '<fieldset>'
-		+ '<label for="password">Password</label>'
-		+ '<input type="password" name="password" id="password">'
-		+ '</fieldset>'
-		+ '<input type="button" id="login" value="Sign in" onClick="Login()">'
-		+ '<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>'
-		+ '<a>ddd</a>'
-		+ '</fieldset>'
-		+ '<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p' > +'</form>';
-
-var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045"  style="list-style: none !important;">'
-	+'<div class="background_user" style="background-color:rgb(255,255,255);width:200%" >'
-	+'<ul class="multi-column-dropdown"style="width:100%; margin:0 auto;">'
-		+'<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="select(this)">主页</a></li>'
-		+'<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="Logout()">退出</a></li>'
-	+'</ul>'
-	+'</div>'
-	+'</li>'
 function Login() {
 	var email = $("#email").val();
 	var password = $("#password").val();
@@ -60,7 +38,19 @@ function Login() {
 		console.log(cookie_uname);
 		console.log(cookie_email);
 		console.log(cookie_password);
-//		$("#loginBox").empty();
+		User_uid = cookie_uid;
+		User_uname = cookie_uname;
+		User_email = cookie_email;
+		
+		var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045"  style="list-style: none !important;">'
+			+ '<div class="background_user" style="width:200%" >'
+			+ '<ul class="multi-column-dropdown"style="background-color:rgb(255,255,255);width:100%; margin:0 auto;border: 1px solid rgba(0, 0, 0, .15);'
+		    +'border-radius: 4px;background-clip: padding-box;">'
+			+ '<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="select(this)">'+User_uname+'</a></li>'
+			+ '<li class="searchtype"><a href="UserInfo.html" class="list" style="margin-left: 0px;" onClick="select(this)">主页</a></li>'
+			+ '<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="Logout()">退出</a></li>'
+			+ '</ul>' + '</div>' + '</li>';
+		
 		$("#loginBox").html(html2);
 	} else {
 		console.log("为空");
@@ -72,16 +62,37 @@ function Login() {
 				type : "POST",
 				success : function(data) {
 					var msg = data[0].msg;
-					console.log(msg);
-					flag = false;
-					$("#loginBox").html(html2);
-					// if (remember_flag) {
-					// setCookie()
-					// }
+					var state = data[1].state;
+					if (state == '0') {
+						$("#msg").html(msg);
+						console.log(msg);
+						
+						User_uid = data[2].uid;
+						User_uname = data[3].uname;
+						User_email = email;
+						console.log(User_uid);
+						console.log(User_uname);
+						console.log(User_email);
+						
+						var html2 = '<li class="J_Menu menu my-taobao" data-spm="1997525045"  style="list-style: none !important;">'
+							+ '<div class="background_user" style="width:200%" >'
+							+ '<ul class="multi-column-dropdown"style="background-color:rgb(255,255,255);width:100%; margin:0 auto;border: 1px solid rgba(0, 0, 0, .15);'
+						    +'border-radius: 4px;background-clip: padding-box;">'
+							+ '<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="select(this)">'+User_uname+'</a></li>'
+							+ '<li class="searchtype"><a href="UserInfo.html" class="list" style="margin-left: 0px;" onClick="select(this)">主页</a></li>'
+							+ '<li class="searchtype"><a class="list" style="margin-left: 0px;" onClick="Logout()">退出</a></li>'
+							+ '</ul>' + '</div>' + '</li>';
+						
+						$("#loginBox").html(html2);
+					} else {
+						$("#msg").html(msg);
+						console.log(msg);
+					}
 				}
 			});
 		} else {
 			console.log("参数为空");
+			$("#msg").html("参数不能为空");
 		}
 	}
 }
