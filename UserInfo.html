@@ -11,8 +11,10 @@
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
 <!-- //Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet"
-	media="all">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/docs.css" type="text/css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 <link href="css/index.css" type="text/css" rel="stylesheet"
 	media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -251,7 +253,7 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<a href="#" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 					<div id="loginBox" style="right:16%;">                
 						<form id="loginForm">
 							<fieldset id="body">
@@ -305,14 +307,14 @@
 							<div class="bd">
 								<div class="info">
 									<p class="line">
-										<strong class="name" id="username">用户名</strong>
+										<strong class="name" id="username" style="letter-spacing: 0px;">用户名</strong>
 									</p>
 									<p class="line"></p>
 									<div class="line" id="userinfomation">性别&nbsp;&nbsp;&nbsp;&nbsp;年龄</div>
 								</div>
 								<div class="sns">
 									<p class="line edit-btn" style="letter-spacing: 0px;">
-										<a class="edit" style="font-size: 14px; border: 0px;">编辑资料</a>
+										<a class="edit" style="font-size: 14px; border: 0px;" onclick="Edit()">编辑资料</a>
 									</p>
 								</div>
 							</div>
@@ -1381,13 +1383,45 @@
 				</table>
 		</div>
 	</div>
-	</div>
 	<!--//footer-->
 	<div class="footer-bottom">
 		<div class="container">
 			<p>Copyright &copy; 2015.Company name All rights reserved.</p>
 		</div>
 	</div>
+	<div class="modal fade" id="modellog" tabindex="-1" role="dialog"
+		aria-labelledby="myModal" aria-hidden="true">
+
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<h2 class="modal-title" style="font-size: 24px;font-weight: 700;text-align: left;color: #34495e;">个人信息</h2>
+				<div class="row" style="margin:15px;">
+					<div class="col-lg-6 allinfo" id="allinfo" style="margin-top:30px;">
+						
+					</div>
+					<div class="col-lg-6" id="timequery">
+						<div class="row-fluid" style="margin-top: 10px;">
+							<div class="span3">
+								<h1>姓名：</h1>
+							</div>
+						</div>
+						<div class="row-fluid"  style="margin-top:10px;">
+							
+						</div>
+						<div class="row-fluid" style="margin-top:20px;">
+						
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/UserInfo.js"></script>
 </body>
-<script type="text/javascript" src="js/UserInfo.js"></script>
+
 </html>

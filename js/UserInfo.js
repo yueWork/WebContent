@@ -1,9 +1,13 @@
 var uid="4b38b561723c4a01b978b72bc785ef06";
 var gender;
 var userinfo="";
+function Edit() {
+	console.log("test edit");
+	$("#modellog").modal();
+}
 $(document).ready(function (){
 	$.ajax({
-				url : "/BookSystem/UserInfo?uid=" + uid,
+				url : "/BookStore/UserInfo?uid=" + uid,
 				contentType : "text/json;charset=utf-8",
 				type : "GET",
 				success : function(data) {
