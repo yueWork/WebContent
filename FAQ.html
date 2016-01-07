@@ -7,17 +7,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"
+	media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/account.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/account.css" type="text/css" rel="stylesheet"
+	media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 <!-- //js -->
 <!-- cart -->
-<script src="js/simpleCart.min.js"> </script>
+<script src="js/simpleCart.min.js">
+	
+</script>
 <!-- cart -->
 </head>
 <body>
@@ -26,13 +32,15 @@
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand1"><img alt="书淘" src="images/book-logo.png"></h1>
+					<h1 class="navbar-brand1">
+						<img alt="书淘" src="images/book-logo.png">
+					</h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse"
@@ -62,21 +70,16 @@
 											<li><a class="list" href="books.html">Butterscotch</a></li>
 											<li><a class="list" href="books.html">Strawberry</a></li>
 											<li><a class="list" href="books.html">Vanilla</a></li>
-											<li><a class="list" href="books.html">Eggless
-													Cakes</a></li>
+											<li><a class="list" href="books.html">Eggless Cakes</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>By Theme</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Heart
-													shaped</a></li>
-											<li><a class="list" href="books.html">Cartoon
-													Cakes</a></li>
-											<li><a class="list" href="books.html">2-3 Tier
-													Cakes</a></li>
-											<li><a class="list" href="books.html">Square
-													shape</a></li>
+											<li><a class="list" href="books.html">Heart shaped</a></li>
+											<li><a class="list" href="books.html">Cartoon Cakes</a></li>
+											<li><a class="list" href="books.html">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="books.html">Square shape</a></li>
 											<li><a class="list" href="books.html">Round shape</a></li>
 											<li><a class="list" href="books.html">Photo cakes</a></li>
 										</ul>
@@ -99,38 +102,50 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<div id="loginBox" style="right:16%;">                
+					<a href="#" id="user" style="right: 150px; position: absolute;"><span
+						class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<div id="loginBox" style="right: 130px; top: 54px;">
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
-									<label for="email">Email Address</label>
-									<input type="text" name="email" id="email">
+									<label for="email">Email Address</label> <input type="text"
+										name="email" id="email">
 								</fieldset>
 								<fieldset>
-									<label for="password">Password</label>
-									<input type="password" name="password" id="password">
+									<label for="password">Password</label> <input type="password"
+										name="password" id="password">
 								</fieldset>
-								<input type="submit" id="login" value="Sign in">
-								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+								<input type="button" id="login" value="Sign in"
+									onClick="Login()"> <label for="checkbox"><input
+									type="checkbox" id="checkbox"> <i>Remember me</i><a
+									id=msg></a></label>
 							</fieldset>
-							<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>
+							<p>
+								New User ? <a class="sign" href="account.html">Sign Up</a> <span><a
+									href="#">Forgot your password?</a></span>
+							</p>
 						</form>
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-					<div class="cart-box" style="right:10.5%;">
-						<h4><a href="checkout.html">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
-						<div class="clearfix"> </div>
+					<a href="#" style="right: 100px; position: absolute;"><span
+						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box" style="right: 75px; top: 54px;">
+						<h4>
+							<a href="checkout.html"> <span class="simpleCart_total">
+									$0.00 </span> (<span id="simpleCart_quantity"
+								class="simpleCart_quantity"> 0 </span>)
+							</a>
+						</h4>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty">Empty cart</a>
+						</p>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"> </div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!--//header-->
@@ -138,47 +153,66 @@
 	<div class="contact">
 		<div class="container">
 			<h2>Contact Us</h2>
-			<div class="map">	
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205251.8961757029!2d-82.55659211602483!3d36.50439253757311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a856b70074b97%3A0x6f9cc0d30bcc841f!2sKingsport%2C+TN%2C+USA!5e0!3m2!1sen!2sin!4v1433743549812"></iframe>
+			<div class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205251.8961757029!2d-82.55659211602483!3d36.50439253757311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a856b70074b97%3A0x6f9cc0d30bcc841f!2sKingsport%2C+TN%2C+USA!5e0!3m2!1sen!2sin!4v1433743549812"></iframe>
 			</div>
 			<div class="contact-infom">
 				<h4>Miscellaneous information :</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sheets containing Lorem Ipsum passages, 
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.It was popularised in the 1960s with the release of Letraset
-					and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit,sheets containing Lorem Ipsum passages, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua.It was popularised in
+					the 1960s with the release of Letraset and more recently with
+					desktop publishing software like Aldus PageMaker including versions
+					of Lorem Ipsum.</p>
 			</div>
 			<div class="address">
 				<div class="col-md-4 address-grids">
 					<h4>Address :</h4>
 					<ul>
 						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<p>	Eiusmod Tempor inc<br>
-							St Dolore Place,<br>
-							Kingsport 56777
+						<p>
+							Eiusmod Tempor inc<br> St Dolore Place,<br> Kingsport
+							56777
 						</p>
 					</ul>
 				</div>
 				<div class="col-md-4 address-grids">
 					<h4>Contact no :</h4>
-					<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+2 800 544 6035</p>
-					<p><span class="glyphicon glyphicon-print" aria-hidden="true"></span>+2 100 889 9466</p>
+					<p>
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+2
+						800 544 6035
+					</p>
+					<p>
+						<span class="glyphicon glyphicon-print" aria-hidden="true"></span>+2
+						100 889 9466
+					</p>
 				</div>
 				<div class="col-md-4 address-grids">
 					<h4>Email :</h4>
-					<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">mail@example.com</a></p>
+					<p>
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a
+							href="mailto:example@mail.com">mail@example.com</a>
+					</p>
 				</div>
-				<div class="clearfix"> </div>
-			</div>		
+				<div class="clearfix"></div>
+			</div>
 			<div class="contact-form">
 				<h4>Contact form</h4>
 				<form>
-					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-					<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+					<input type="text" value="Name" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input type="text" value="Email" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input type="text" value="Telephone" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Telephone';}"
+						required="">
+					<textarea type="text" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Message...';}"
+						required="">Message...</textarea>
 					<button class="btn1">Submit</button>
 				</form>
-			</div>	
+			</div>
 		</div>
 	</div>
 	<!--//contact-->
@@ -186,13 +220,15 @@
 	<div class="footer">
 		<div class="container">
 			<table style="width: 100%">
-					<tr>
+				<tr>
 					<td style="width: 25%"></td>
-					<td style="width: 25%" class="faqa"><a href="support.html"  style="float:left;">帮助</a></td>
-					<td style="width: 25%" class="faqa"><a href="#" style="float:right;">FAQ</a></td>
+					<td style="width: 25%" class="faqa"><a href="support.html"
+						style="float: left;">帮助</a></td>
+					<td style="width: 25%" class="faqa"><a href="#"
+						style="float: right;">FAQ</a></td>
 					<td style="width: 25%"></td>
-					</tr>
-				</table>	
+				</tr>
+			</table>
 
 		</div>
 	</div>
@@ -204,4 +240,6 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="js/Login.js"></script>
+<script type="text/javascript" src="js/Logout.js"></script>
 </html>
