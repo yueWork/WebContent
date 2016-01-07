@@ -25,7 +25,6 @@ function Login() {
 	var email = $("#email").val();
 	var password = $("#password").val();
 	var remember_flag = document.getElementById("checkbox").checked;
-	console.log("test");
 	var all_cookies = document.cookie;
 	if (all_cookies.length > 0) {
 		console.log("不为空");
@@ -55,14 +54,18 @@ function Login() {
 	} else {
 		console.log("为空");
 		if (email.length != 0 && password.length != 0) {
+			console.log("1");
 			$.ajax({
 				url : "/BookStore/Login?email=" + email + "&password="
 						+ password + "&remember_flag=" + remember_flag,
 				contentType : "text/json;charset=utf-8",
 				type : "POST",
 				success : function(data) {
+					console.log("成功");
 					var msg = data[0].msg;
+					console.log(msg);
 					var state = data[1].state;
+					console.log(state);
 					if (state == '0') {
 						$("#msg").html(msg);
 						console.log(msg);
