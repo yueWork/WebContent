@@ -7,17 +7,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"
+	media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/account.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/account.css" type="text/css" rel="stylesheet"
+	media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 <!-- //js -->
 <!-- cart -->
-<script src="js/simpleCart.min.js"> </script>
+<script src="js/simpleCart.min.js">
+	
+</script>
 <!-- cart -->
 </head>
 <body>
@@ -26,13 +32,15 @@
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand1"><img alt="书淘" src="images/book-logo.png"></h1>
+					<h1 class="navbar-brand1">
+						<img alt="书淘" src="images/book-logo.png">
+					</h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse"
@@ -62,21 +70,16 @@
 											<li><a class="list" href="books.html">Butterscotch</a></li>
 											<li><a class="list" href="books.html">Strawberry</a></li>
 											<li><a class="list" href="books.html">Vanilla</a></li>
-											<li><a class="list" href="books.html">Eggless
-													Cakes</a></li>
+											<li><a class="list" href="books.html">Eggless Cakes</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>By Theme</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Heart
-													shaped</a></li>
-											<li><a class="list" href="books.html">Cartoon
-													Cakes</a></li>
-											<li><a class="list" href="books.html">2-3 Tier
-													Cakes</a></li>
-											<li><a class="list" href="books.html">Square
-													shape</a></li>
+											<li><a class="list" href="books.html">Heart shaped</a></li>
+											<li><a class="list" href="books.html">Cartoon Cakes</a></li>
+											<li><a class="list" href="books.html">2-3 Tier Cakes</a></li>
+											<li><a class="list" href="books.html">Square shape</a></li>
 											<li><a class="list" href="books.html">Round shape</a></li>
 											<li><a class="list" href="books.html">Photo cakes</a></li>
 										</ul>
@@ -99,38 +102,50 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<div id="loginBox" style="right:16%;">                
+					<a href="#" id="user" style="right: 150px; position: absolute;"><span
+						class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<div id="loginBox" style="right: 130px; top: 54px;">
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
-									<label for="email">Email Address</label>
-									<input type="text" name="email" id="email">
+									<label for="email">Email Address</label> <input type="text"
+										name="email" id="email">
 								</fieldset>
 								<fieldset>
-									<label for="password">Password</label>
-									<input type="password" name="password" id="password">
+									<label for="password">Password</label> <input type="password"
+										name="password" id="password">
 								</fieldset>
-								<input type="submit" id="login" value="Sign in">
-								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+								<input type="button" id="login" value="Sign in"
+									onClick="Login()"> <label for="checkbox"><input
+									type="checkbox" id="checkbox"> <i>Remember me</i><a
+									id=msg></a></label>
 							</fieldset>
-							<p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>
+							<p>
+								New User ? <a class="sign" href="account.html">Sign Up</a> <span><a
+									href="#">Forgot your password?</a></span>
+							</p>
 						</form>
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-					<div class="cart-box" style="right:10.5%;">
-						<h4><a href="checkout.html">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
-						<div class="clearfix"> </div>
+					<a href="#" style="right: 100px; position: absolute;"><span
+						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box" style="right: 75px; top: 54px;">
+						<h4>
+							<a href="checkout.html"> <span class="simpleCart_total">
+									$0.00 </span> (<span id="simpleCart_quantity"
+								class="simpleCart_quantity"> 0 </span>)
+							</a>
+						</h4>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty">Empty cart</a>
+						</p>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"> </div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!--//header-->
@@ -138,22 +153,26 @@
 	<div class="cart-items">
 		<div class="container">
 			<h2>My Shopping Cart(3)</h2>
-			<script>$(document).ready(function(c) {
-				$('.close1').on('click', function(c){
-					$('.cart-header').fadeOut('slow', function(c){
-						$('.cart-header').remove();
+			<script>
+				$(document).ready(function(c) {
+					$('.close1').on('click', function(c) {
+						$('.cart-header').fadeOut('slow', function(c) {
+							$('.cart-header').remove();
+						});
 					});
-					});	  
 				});
 			</script>
 			<div class="cart-header">
-				<div class="close1"> </div>
+				<div class="close1"></div>
 				<div class="cart-sec simpleCart_shelfItem">
 					<div class="cart-item cyc">
-						 <img src="images/m1.png" class="img-responsive" alt="">
+						<img src="images/m1.png" class="img-responsive" alt="">
 					</div>
 					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+						<h3>
+							<a href="#"> Lorem Ipsum is not simply </a><span>Pickup
+								time:</span>
+						</h3>
 						<ul class="qty">
 							<li><p>Min. order value:</p></li>
 							<li><p>FREE delivery</p></li>
@@ -162,56 +181,31 @@
 							<p>Service Charges : $10.00</p>
 							<span>Delivered in 1-1:30 hours</span>
 							<div class="clearfix"></div>
-						</div>	
+						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			 <script>$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-							$('.cart-header2').fadeOut('slow', function(c){
-						$('.cart-header2').remove();
+			<script>
+				$(document).ready(function(c) {
+					$('.close2').on('click', function(c) {
+						$('.cart-header2').fadeOut('slow', function(c) {
+							$('.cart-header2').remove();
+						});
 					});
-					});	  
-					});
-			 </script>
+				});
+			</script>
 			<div class="cart-header2">
-				<div class="close2"> </div>
+				<div class="close2"></div>
 				<div class="cart-sec simpleCart_shelfItem">
 					<div class="cart-item cyc">
-						 <img src="images/m2.png" class="img-responsive" alt="">
+						<img src="images/m2.png" class="img-responsive" alt="">
 					</div>
 					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-						<p>Service Charges : $10.00</p>
-						<span>Delivered in 1-1:30 hours</span>
-						<div class="clearfix"></div>
-					</div>	
-				   </div>
-				   <div class="clearfix"></div>
-				</div>
-			</div>
-				<script>$(document).ready(function(c) {
-					$('.close3').on('click', function(c){
-							$('.cart-header3').fadeOut('slow', function(c){
-						$('.cart-header3').remove();
-					});
-					});	  
-					});
-				</script>
-			<div class="cart-header3">
-				<div class="close3"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						 <img src="images/m3.png" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+						<h3>
+							<a href="#"> Lorem Ipsum is not simply </a><span>Pickup
+								time:</span>
+						</h3>
 						<ul class="qty">
 							<li><p>Min. order value:</p></li>
 							<li><p>FREE delivery</p></li>
@@ -220,25 +214,60 @@
 							<p>Service Charges : $10.00</p>
 							<span>Delivered in 1-1:30 hours</span>
 							<div class="clearfix"></div>
-						</div>	
+						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
-			</div>		
+			</div>
+			<script>
+				$(document).ready(function(c) {
+					$('.close3').on('click', function(c) {
+						$('.cart-header3').fadeOut('slow', function(c) {
+							$('.cart-header3').remove();
+						});
+					});
+				});
+			</script>
+			<div class="cart-header3">
+				<div class="close3"></div>
+				<div class="cart-sec simpleCart_shelfItem">
+					<div class="cart-item cyc">
+						<img src="images/m3.png" class="img-responsive" alt="">
+					</div>
+					<div class="cart-item-info">
+						<h3>
+							<a href="#"> Lorem Ipsum is not simply </a><span>Pickup
+								time:</span>
+						</h3>
+						<ul class="qty">
+							<li><p>Min. order value:</p></li>
+							<li><p>FREE delivery</p></li>
+						</ul>
+						<div class="delivery">
+							<p>Service Charges : $10.00</p>
+							<span>Delivered in 1-1:30 hours</span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<!--//checkout-->	
+	<!--//checkout-->
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
 			<table style="width: 100%">
-					<tr>
+				<tr>
 					<td style="width: 25%"></td>
-					<td style="width: 25%" class="faqa"><a href="support.html"  style="float:left;">帮助</a></td>
-					<td style="width: 25%" class="faqa"><a href="FAQ.html" style="float:right;">FAQ</a></td>
+					<td style="width: 25%" class="faqa"><a href="support.html"
+						style="float: left;">帮助</a></td>
+					<td style="width: 25%" class="faqa"><a href="FAQ.html"
+						style="float: right;">FAQ</a></td>
 					<td style="width: 25%"></td>
-					</tr>
-				</table>	
+				</tr>
+			</table>
 		</div>
 	</div>
 	</div>
@@ -249,4 +278,6 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="js/Login.js"></script>
+<script type="text/javascript" src="js/Logout.js"></script>
 </html>

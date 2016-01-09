@@ -10,7 +10,9 @@
 <script type="application/x-javascript">
 	
 	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
 
 
 </script>
@@ -107,9 +109,9 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#" id="user" style="right:150px;position: absolute;"><span class="glyphicon glyphicon-user"
-						aria-hidden="true"></span></a>
-					<div id="loginBox" style="right:130px;top:54px;">                
+					<a href="#" id="user" style="right: 150px; position: absolute;"><span
+						class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<div id="loginBox" style="right: 130px; top: 54px;">
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
@@ -133,9 +135,9 @@
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#" style="right:100px;position: absolute;"><span class="glyphicon glyphicon-shopping-cart"
-						aria-hidden="true"></span></a>
-					<div class="cart-box" style="right: 75px;top:54px;">
+					<a href="#" style="right: 100px; position: absolute;"><span
+						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box" style="right: 75px; top: 54px;">
 						<h4>
 							<a href="checkout.html"> <span class="simpleCart_total">
 									$0.00 </span> (<span id="simpleCart_quantity"
@@ -168,7 +170,7 @@
 									<ul class="dropdown-menu multi-column columns-1">
 										<div class="row">
 											<h4 style="margin-left: 10px;">查找类别</h4>
-											<ul class="multi-column-dropdown">
+											<ul class="multi-column-dropdown" id="parent">
 												<li class="searchtype"><a class="list"
 													style="margin-left: 10px;" onclick="select(this)">作者</a></li>
 												<li class="searchtype"><a class="list"
@@ -185,7 +187,7 @@
 							<td style="width: 55%;"><input type="text" class="text"
 								id="searchinput" style="width: 100%;"></td>
 							<td style="width: 25%;"><input type="button"
-								style="width: 100%;" value="搜索" onclick="SearchBook()">
+								style="width: 100%;" value="搜索"  onclick="Search()">
 							</td>
 						</tr>
 					</table>
@@ -229,4 +231,5 @@
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="js/Login.js"></script>
 <script type="text/javascript" src="js/Logout.js"></script>
+<script type="text/javascript" src="js/Search.js"></script>
 </html>
