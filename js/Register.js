@@ -22,7 +22,7 @@ function Register() {
 						var msg = data[0].msg;
 						var state = data[1].state
 						console.log(msg);
-						$("#msg").html(msg);
+						$("#msg1").html(msg);
 						if (state == '0')
 							window.location.href = "/BookStore/index.html";
 					}
@@ -30,19 +30,18 @@ function Register() {
 			else {
 				console.log("密码不一致");
 				var msg = "密码不一致";
-				$("#msg").html(msg);
+				$("#msg1").html(msg);
 			}
 		} else {
 			console.log("密码必须不少于6位");
 			var msg = "密码必须不少于6位";
-			$("#msg").html(msg);
-
+			$("#msg1").html(msg);
 		}
 
 	} else {
 		console.log("存在参数为空");
 		var msg = "存在参数为空";
-		$("#msg").html(msg);
+		$("#msg1").html(msg);
 	}
 
 }

@@ -34,6 +34,22 @@
     <url-pattern>/Search</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>Books</servlet-name>
+    <servlet-class>com.org.Books</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Books</servlet-name>
+    <url-pattern>/Books</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Single</servlet-name>
+    <servlet-class>com.org.Single</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Single</servlet-name>
+    <url-pattern>/Single</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>UserInfo</servlet-name>
     <servlet-class>com.org.UserInfo</servlet-class>
   </servlet>

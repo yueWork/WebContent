@@ -186,24 +186,26 @@ function hideURLbar() {
 			<h2>书籍</h2>
 			<div class="col-md-9 product-model-sec">
 				<div class="product-grid">
-					<a href="single.html">
+					<!-- <a href="single.html"> -->
 						<div class="more-product">
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m1.png" class="img-responsive" alt="">
+							<img id="image0" src="images/m1.png" class="img-responsive" alt="">
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button onclick="Single(1)">查看</button>
+									<button onclick="Single(this)">查看</button>
+									<span id="bid0" style="visibility: hidden;"></span>
 								</h4>
+								
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName1">Product #1</h4>
-							<span class="item_price" id="bookPrice1">$2000.00</span> <input
-								type="text" class="item_quantity" value="100" id="bookNum1" />
+							<h4 id="bookName0">Product #1</h4>
+							<span id="price0" class="item_price" id="bookPrice1">$2000.00</span> 
+							<p type="text" class="item_quantity" id="counter0"></p>
 							<input type="button" class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -215,19 +217,20 @@ function hideURLbar() {
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m2.png" class="img-responsive" alt="" />
+							<img id="image1" src="images/m2.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
+									<span id="bid1" style="visibility: hidden;"></span>
 								</h4>
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName2">Product #2</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
+							<h4 id="bookName1">Product #2</h4>
+							<span id="price1" class="item_price">$2000.00</span> 
+							<p class="item_quantity" id="counter1"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -239,19 +242,20 @@ function hideURLbar() {
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m3.png" class="img-responsive" alt="" />
+							<img id="image2" src="images/m3.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
+									<a id="bid2" style="visibility: hidden;"></a>
 								</h4>
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName3">Product #3</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
+							<h4 id="bookName2">Product #3</h4>
+							<span id="price2" class="item_price">$2000.00</span> 
+							<p class="item_quantity"id="counter2"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -263,19 +267,20 @@ function hideURLbar() {
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m4.png" class="img-responsive" alt="" />
+							<img id="image3" src="images/m4.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
+									<a id="bid3" style="visibility: hidden;"></a>
 								</h4>
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName4">Product #4</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
+							<h4 id="bookName3">Product #4</h4>
+							<span id="price3" class="item_price">$2000.00</span> <p
+								class="item_quantity" id="counter3"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -287,19 +292,21 @@ function hideURLbar() {
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m5.png" class="img-responsive" alt="" />
+							<img id="image4" src="images/m5.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
+									<a id="bid4" style="visibility: hidden;"></a>
 								</h4>
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName5">Product #5</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
+							<h4 id="bookName4">Product #5</h4>
+							<span id="price4" class="item_price">$2000.00</span> 
+							<p
+								class="item_quantity" id="counter4"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -311,97 +318,26 @@ function hideURLbar() {
 							<span> </span>
 						</div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m6.png" class="img-responsive" alt="" />
+							<img id="image5" src="images/m6.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
+									<a id="bid5" style="visibility: hidden;"></a>
 								</h4>
 							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4 id="bookName6">Product #6</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
+							<h4 id="bookName5">Product #6</h4>
+							<span id="price5" class="item_price">$2000.00</span> 
+							<p
+								class="item_quantity" id="counter5"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
-					<a href="single.html">
-						<div class="more-product">
-							<span> </span>
-						</div>
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m7.png" class="img-responsive" alt="" />
-							<div class="b-wrapper">
-								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
-								</h4>
-							</div>
-						</div>
-					</a>
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4 id="bookName7">Product #7</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
-								class="item_add items" value="添加到购物车">
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.html">
-						<div class="more-product">
-							<span> </span>
-						</div>
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m9.png" class="img-responsive" alt="" />
-							<div class="b-wrapper">
-								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
-								</h4>
-							</div>
-						</div>
-					</a>
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4 id="bookName8">Product #8</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
-								class="item_add items" value="添加到购物车">
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.html">
-						<div class="more-product">
-							<span> </span>
-						</div>
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="images/m9.png" class="img-responsive" alt="" />
-							<div class="b-wrapper">
-								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
-								</h4>
-							</div>
-						</div>
-					</a>
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4 id="bookName9">Product #9</h4>
-							<span class="item_price">$2000.00</span> <input type="text"
-								class="item_quantity" value="1" /> <input type="button"
-								class="item_add items" value="添加到购物车">
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-
 			</div>
 			<div class="col-md-3 rsidebar span_1_of_left">
 				<section class="sky-form">
@@ -1048,4 +984,5 @@ function hideURLbar() {
 <script type="text/javascript" src="js/Login.js"></script>
 <script type="text/javascript" src="js/Logout.js"></script>
 <script type="text/javascript" src="js/books.js"></script>
+<script type="text/javascript" src="js/single.js"></script>
 </html>

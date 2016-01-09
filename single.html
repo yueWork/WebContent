@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>single</title>
+<title id=web_title>single</title>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -185,16 +185,15 @@
 					</div>
 				</div>
 				<div class="col-md-4 single-grid simpleCart_shelfItem">
-					<h3>书名</h3>
-					<p>书籍信息</p>
-					<div class="galry">
-						<div class="prices">
-							<h5 class="item_price">价格</h5>
-						</div>
-						<div class="rating">
-							<span>☆</span> <span>☆</span> <span>☆</span> <span>☆</span> <span>☆</span>
-						</div>
-						<div class="clearfix"></div>
+					<h3 id=bname>书名</h3>
+					
+					<p id="bauthor">作者</p>
+					<p id="bpublisher">出版商</p>
+					<p id="Publish_data">出版日期</p>
+					<p id="tname">类别</p>
+			
+					<div class="prices">
+						<h5 class="item_price" id="bprice" style="float:left;">$100</h5>
 					</div>
 					<p class="qty">购买数量 :</p>
 					<input min="1" type="number" id="quantity" name="quantity"
@@ -202,14 +201,6 @@
 					<div class="btn_form">
 						<a href="#" class="add-cart item_add">添加到购物车</a>
 						<a href="#" class="add-cart item_add">购买</a>
-					</div>
-					<div class="tag">
-						<p>
-							类别 : <a href="#"> Cakes</a>
-						</p>
-						<p>
-							标签 : <a href="#"> Lorem ipsum </a>
-						</p>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -226,45 +217,13 @@
 						<h4 class="panel-title">
 							<a role="button" data-toggle="collapse" data-parent="#accordion"
 								href="#collapseOne" aria-expanded="true"
-								aria-controls="collapseOne"> 书籍描述 </a>
+								aria-controls="collapseOne"> 书籍介绍</a>
 						</h4>
 					</div>
 					<div id="collapseOne" class="panel-collapse collapse in"
 						role="tabpanel" aria-labelledby="headingOne">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3
-							wolf moon officia aute, non cupidatat skateboard dolor brunch.
-							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-							tempor, sunt aliqua put a bird on it squid single-origin coffee
-							nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-							craft beer labore wes anderson cred nesciunt sapiente ea
-							proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-							craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-							probably haven't heard of them accusamus labore sustainable VHS.
-						</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingTwo">
-						<h4 class="panel-title">
-							<a class="collapsed" role="button" data-toggle="collapse"
-								data-parent="#accordion" href="#collapseTwo"
-								aria-expanded="false" aria-controls="collapseTwo">
-								评价 </a>
-						</h4>
-					</div>
-					<div id="collapseTwo" class="panel-collapse collapse"
-						role="tabpanel" aria-labelledby="headingTwo">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3
-							wolf moon officia aute, non cupidatat skateboard dolor brunch.
-							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-							tempor, sunt aliqua put a bird on it squid single-origin coffee
-							nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-							craft beer labore wes anderson cred nesciunt sapiente ea
-							proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-							craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-							probably haven't heard of them accusamus labore sustainable VHS.
+						<div class="panel-body" >
+							<h id="binstruction">无</h>
 						</div>
 					</div>
 				</div>
@@ -294,4 +253,5 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="js/single.js"></script>
 </html>
