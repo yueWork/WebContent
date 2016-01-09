@@ -14,6 +14,7 @@
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
 <link href="css/docs.css" type="text/css" rel="stylesheet">
 <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
+
 <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 <link href="css/index.css" type="text/css" rel="stylesheet"
 	media="all">
@@ -26,8 +27,13 @@
 <link href="css/global-min.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/tbindex.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/ajaxfileupload.js"></script>
+
+<script type="text/javascript" src="js/UserInfo.js"></script>
 <!-- //js -->
 <!-- cart -->
 <script src="js/simpleCart.min.js">
@@ -302,7 +308,7 @@
 					<div class="cm-bd" style="margin-top: 15px;">
 						<div class="hp-user-info">
 							<div class="hd">
-								<img class="user-pic" src="images/tbuser.jpg">
+								<img id="userMainPic" class="user-pic" src="images/tbuser.jpg">
 							</div>
 							<div class="bd">
 								<div class="info">
@@ -1395,43 +1401,155 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<h2 class="modal-title" style="font-size: 24px;font-weight: 700;text-align: left;color: #34495e;">个人信息</h2>
-				<div class="row" style="margin:15px;">
-					<div class="col-lg-6 allinfo" id="allinfo" style="margin-top:30px;">
-						<p>
-							<label>当前头像:</label>
-							<span class="pf-avatar-box">
-								<a class="pf-avatar">
-								<img src="//wwc.alicdn.com/avatar/getAvatar.do?userId=2013045725&amp;width=80&amp;height=80&amp;type=sns">
-								</a>
-								<a href="//i.taobao.com/user/headset.htm" class="pf-edit-avatar" style="display: none;">编辑头像</a>
-							</span>
-						</p>
-						<!-- <a style="text-align: right;">当前头像:&nbsp;&nbsp;&nbsp;&nbsp;</a>
-						<img src="images/tbuser.jpg" style="width:60px;height: 60px;"> -->
+				<div class="row-fluid" style="margin: 15px;margin-bottom: 0px;">
+					<h4 class="col-lg-4"
+						style="border-bottom: 0px; color: #34495e;font-size:15px; padding: 0px;min-width: 80px;max-width: 90px;">当前头像:</h4>
+					<p class="col-lg-4" style="padding: 0px;">
+
+						<span class="pf-avatar-box">
+						<a class="pf-avatar"
+							style="padding: 0px; height: 100%;" id="mouseevent"
+							onclick="test()" onmouseover="editUserPic()" onmouseout="removeout()"> <img id="userPicImg"
+								src="userImg/userimg.jpg" style="width: 80px; height: 74px;">
+						</a> 
+						<a class="pf-edit-avatar" id="edit" style="display: none;" onmouseover="editUserPic()" onmouseout="removeout()">编辑头像</a>
+						<input id="fileToUpload" type="file" size="20"
+							name="fileToUpload" class="input" onchange="upload(this)"
+							style="visibility: hidden;">
+						</span>
+					</p>
+					<div class="col-lg-4">
+						<img id="loading" src="images/loading.gif" style="display: none;"> 
 					</div>
-					<div class="col-lg-6" id="timequery">
-						<div class="row-fluid" style="margin-top: 10px;">
-							<div class="span3">
-								<h1>姓名：</h1>
-							</div>
+				</div>
+				<!-- <a style="text-align: right;">当前头像:&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					<img src="images/tbuser.jpg" style="width:60px;height: 60px;"> -->
+				<div class="row-fluid" id="timequery" style="padding: 0px;margin-left: 15px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">昵称：</h1>
 						</div>
-						<div class="row-fluid"  style="margin-top:10px;">
-							
+						<div class="col-lg-5" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="unameinput" type="text" class="login-field" style="height: 33px;">
 						</div>
-						<div class="row-fluid" style="margin-top:20px;">
-						
-							
+						<div class="col-lg-3" style="margin-top: 5px;">
+							<a id="unamea" style="visibility: hidden;" class="awarning">*昵称不能为空</a>
+						</div>
+					</div>
+				</div>				
+				<div class="row-fluid" id="" style="padding: 0px;margin-left: 15px;margin-top: 15px;">
+					<form>
+						<table>
+							<tr>
+								<td style="min-width: 90px;max-width: 90px;">
+									<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;width: 80px;">性别：</h1>
+								</td>
+								<td style="min-width: 20px;max-width: 20px;">
+									<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;padding-top: 0px;width: 20px">男</h1>
+								</td>
+								<td style="min-width: 40px;max-width: 40px;text-align: right;">
+									<input type="radio"  style="height: 40px;" checked="checked" id="mcheck" onclick="radioEve(this)">
+								</td>
+								<td style="min-width: 80px;max-width: 120px;">
+								</td>
+								<td style="min-width: 20px;max-width: 20px;">
+									<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;padding-top: 0px;width: 20px">女</h1>
+								</td>
+								<td style="min-width: 40px;max-width: 40px;text-align: right;">
+									<input type="radio"  style="height: 40px;" id="fcheck" onclick="radioEve(this)">
+								</td>
+							</tr>
+						</table>
+					</form>
+					<!-- <div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding-top: 15px;padding-left: 0px;">
+						<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">性别：</h1>
+					</div>
+					<div class="col-lg-2 row-fluid" style="padding: 0px;min-width: 80px;max-width: 90px;">
+						<h1 class="col-lg-6" style="border-bottom: 0px; color: #34495e;font-size:15px;padding-top: 15px;">男</h1>
+						<input type="radio"  style="height: 40px;" checked="checked">
+					</div>
+					<div class="col-lg-2 row-fluid" style="padding-left: 100px;min-width: 200px;max-width: 200px;">
+						<h1 class="col-lg-6" style="border-bottom: 0px; color: #34495e;font-size:15px;padding-top: 15px;">女</h1>
+						<input type="radio"  style="height: 40px;">
+					</div> -->
+				</div>
+				<!-- <div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 20px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">邮箱：</h1>
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="emailinput" type="text" class="login-field" style="height: 33px;">
+						</div>
+						<div class="col-lg-3" style="margin-top: 5px;">
+							<a id="emaila" style="color: #E74C3C;visibility: hidden;" class="awarning">*邮箱不能为空</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 20px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">联系电话：</h1>
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="phoneinput" type="text" class="login-field" style="height: 33px;">
+						</div>
+						<div class="col-lg-3" style="margin-top: 5px;">
+							<a id="phonea" style="color: #E74C3C;visibility: hidden;" class="awarning">*联系电话不能为空</a>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 20px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">新密码：</h1>
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="passwordinput" type="password" class="login-field" style="height: 33px;">
+						</div>
+						<div class="col-lg-3" style="margin-top: 5px;">
+							<a id="passworda" style="color: #E74C3C;visibility: hidden;" class="awarning">*密码不能为空</a>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 20px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">确认密码：</h1>
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="confirminput" type="password" class="login-field" style="height: 33px;">
+						</div>
+						<div class="col-lg-3" style="margin-top: 5px;">
+							<a id="confirma" style="color: #E74C3C;visibility: hidden;" class="awarning">*两次密码不一致</a>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 20px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">年龄：</h1>
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<input id="ageinput" type="text" class="login-field" style="height: 33px;">
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid" style="padding: 0px;margin-left: 15px;margin-bottom: 40px;">
+					<div class="row-fluid" style="margin-top: 10px;">
+						<div class="col-lg-4" style="min-width: 80px;max-width: 90px;padding: 0px;">
+							<!-- <h1 style="border-bottom: 0px; color: #34495e;font-size:15px;">年龄：</h1> -->
+						</div>
+						<div class="col-lg-3" style="padding: 0px;min-width: 299px;max-width: 299px;">
+							<a href="#" class="btn btn-block" style="width: 299px;" onclick="updateUserInfo()">提交</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.min.js"></script>
+	
 	<script src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/UserInfo.js"></script>
+	
 </body>
-
 </html>

@@ -41,4 +41,20 @@
     <servlet-name>UserInfo</servlet-name>
     <url-pattern>/UserInfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ImgUpload</servlet-name>
+    <servlet-class>com.org.ImgUpload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImgUpload</servlet-name>
+    <url-pattern>/ImgUpload</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <servlet-class>com.org.UpdateUserInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <url-pattern>/UpdateUserInfo</url-pattern>
+  </servlet-mapping>
 </web-app>
