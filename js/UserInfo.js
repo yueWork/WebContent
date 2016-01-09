@@ -1,6 +1,7 @@
 var uid="4b38b561723c4a01b978b72bc785ef06";
 var gender;
 var userinfo="";
+var pagenum=0;
 var imagepath="/BookStore/userImg/userimg";
 function Edit() {	
 	$("#modellog").modal();
@@ -105,7 +106,64 @@ function radioEve(dom) {
 	
 	document.getElementById(id).checked=true;
 }
+function loadOrder() {
+	$("#order0").show();
+	$("#order1").show();
+	$("#order2").show();
+	
+	$.ajax({
+		url : "/BookStore/OrderInfo?uid=" + uid+"&pagenum="+pagenum,
+		contentType : "text/json;charset=utf-8",
+		type : "GET",
+		success : function(data) {
+			var date;
+			var bname;
+			var oid;
+			var price;
+			var dateid="#date";
+			var bnameid="#bname";
+			var onoid="#orderno";
+			var priceid="#price";
+			console.log("sta:"+data.status);
+			if(data.status=="0"){
+				$("#order0").hide();
+				$("#order1").hide();
+				$("#order2").hide();
+			}else{
+				var result=data.result;
+				var i;
+				for(i=0;i<result.length;i++){
+					date=result[i].time;
+					bname=result[i].bname;
+					oid=result[i].oid;
+					price=result[i].price;	
+					$(dateid+i).html(date);
+					$(bnameid+i).html(bname);
+					$(onoid+i).html(oid);
+					$(priceid+i).html(price);														
+				}
+				for(;i<3;i++){
+					var order="#order"+i;
+					$(order).hide();
+				}
+			}
+		}
+	});
+}
+function next() {
+	pagenum++;
+	console.log(pagenum);
+	loadOrder();
+}
+function pre() {
+	if(pagenum>0){
+		pagenum--;
+		console.log(pagenum);
+		loadOrder();
+	}
+}
 $(document).ready(function() {
+	loadOrder();
 	$.ajax({
 		url : "/BookStore/UserInfo?uid=" + uid,
 		contentType : "text/json;charset=utf-8",

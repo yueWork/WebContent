@@ -73,4 +73,12 @@
     <servlet-name>UpdateUserInfo</servlet-name>
     <url-pattern>/UpdateUserInfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderInfo</servlet-name>
+    <servlet-class>com.org.OrderInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderInfo</servlet-name>
+    <url-pattern>/OrderInfo</url-pattern>
+  </servlet-mapping>
 </web-app>
