@@ -12,6 +12,31 @@ function GetRequest1() {
 	}
 	return theRequest;
 }
+function addcartSingle() {
+	var quantity=$("#quantity").val();
+	console.log("quantity:"+quantity);
+	var Request = new Object();
+	Request = GetRequest1();
+	var bid = Request["bid"];
+	
+	if(User_uid==null){
+		alert("请登录！");
+	}
+	else{
+		var url="/BookStore/ShopCart?uid="+User_uid+"&bid="+bid+"&num="+quantity;
+		$.ajax({
+			url : url,
+			contentType : "text/json;charset=utf-8",
+			type : "GET",
+			success : function(data) {
+				alert("添加购物车成功");
+			},
+			error : function(){
+				alert("添加购物车失败");
+			}
+		});
+	}
+}
 $(document).ready(function() {
 //	var bid=1;
 	var Request = new Object();

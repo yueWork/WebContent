@@ -22,6 +22,8 @@ function getCookie(cookie_name) {
 	return value;
 }
 function Login() {
+	var x=window.locationbar.href;
+	console.log("X:"+x);
 	var email = $("#email").val();
 	var password = $("#password").val();
 	var remember_flag = document.getElementById("checkbox").checked;

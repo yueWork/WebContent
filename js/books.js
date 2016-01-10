@@ -243,9 +243,10 @@ function addcartBooks(dom) {
 	console.log("h4:" + index);
 	if (User_uid == null) {
 		alert("请登录！");
-	} else {
-		var url = "BookStore/ShopCart?uid" + User_uid + "&bid=" + index
-				+ "&num=" + 1;
+	} 
+	else{
+		var url="/BookStore/ShopCart?uid="+User_uid+"&bid="+index+"&num="+1;
+
 		$.ajax({
 			url : url,
 			contentType : "text/json;charset=utf-8",
