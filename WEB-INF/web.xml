@@ -98,4 +98,12 @@
     <url-pattern>/Connect</url-pattern>
 
   </servlet-mapping>
+  <servlet>
+    <servlet-name>loadShopCart</servlet-name>
+    <servlet-class>com.org.loadShopCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loadShopCart</servlet-name>
+    <url-pattern>/loadShopCart</url-pattern>
+  </servlet-mapping>
 </web-app>

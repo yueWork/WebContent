@@ -134,7 +134,7 @@ function addcartBooks(dom){
 		alert("请登录！");
 	}
 	else{
-		var url="BookStore/ShopCart?uid"+User_uid+"&bid="+index+"&num="+1;
+		var url="/BookStore/ShopCart?uid="+User_uid+"&bid="+index+"&num="+1;
 		$.ajax({
 			url : url,
 			contentType : "text/json;charset=utf-8",

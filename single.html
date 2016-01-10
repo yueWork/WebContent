@@ -121,7 +121,7 @@
 			</nav>
             <div class="header-info">
                 <div class="header-right login">
-                    <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    <a ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                     <div id="loginBox" style="right:16%;">
                         <form id="loginForm">
                             <fieldset id="body">
@@ -133,7 +133,7 @@
                                     <label for="password">Password</label>
                                     <input type="password" name="password" id="password">
                                         </fieldset>
-                                <input type="submit" id="login" value="Sign in">
+                                <input type="submit" id="login" value="Sign in" onClick="Login()">
                                     <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
                                     </fieldset>
                             <p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>
@@ -187,7 +187,7 @@
 					<input min="1" type="number" id="quantity" name="quantity"
 						value="1" class="form-control input-small">
 					<div class="btn_form">
-						<a href="#" class="add-cart item_add">添加到购物车</a>
+						<a href="#" class="add-cart item_add" onclick="addcartSingle()">添加到购物车</a>
 						<a href="#" class="add-cart item_add">购买</a>
 					</div>
 				</div>
