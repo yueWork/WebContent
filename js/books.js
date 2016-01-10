@@ -110,3 +110,25 @@ function click(){
 		}
 	});
 }
+function addcartBooks(dom){
+	var span=$(dom).parent().parent().parent().find(".product-img  .b-wrapper h4 span");
+	var index=span.html();
+	console.log("h4:"+index);
+	if(User_uid==null){
+		alert("请登录！");
+	}
+	else{
+		var url="BookStore/ShopCart?uid"+User_uid+"&bid="+index+"&num="+1;
+		$.ajax({
+			url : url,
+			contentType : "text/json;charset=utf-8",
+			type : "GET",
+			success : function(data) {
+				alert("添加购物车成功");
+			},
+			error : function(){
+				alert("添加购物车失败");
+			}
+		});
+	}
+}

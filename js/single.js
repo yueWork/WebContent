@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var Request = new Object();
 	Request = GetRequest();
 	var bid = Request["bid"];
+//	var bid=1;
 	$.ajax({
 		url : "/BookStore/Single?bid=" + bid ,
 				contentType : "text/json;charset=utf-8",

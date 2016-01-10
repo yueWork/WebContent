@@ -81,4 +81,12 @@
     <servlet-name>OrderInfo</servlet-name>
     <url-pattern>/OrderInfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ShopCart</servlet-name>
+    <servlet-class>com.org.ShopCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShopCart</servlet-name>
+    <url-pattern>/ShopCart</url-pattern>
+  </servlet-mapping>
 </web-app>
