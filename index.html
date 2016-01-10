@@ -54,56 +54,198 @@
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index.html" class="active">首页</a></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle"
 							data-toggle="dropdown">分类<b class="caret"></b></a>
-							<ul class="dropdown-menu multi-column columns-4">
-								<div class="row">
-									<div class="col-sm-3">
-										<h4>By Relation</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Friend</a></li>
-											<li><a class="list" href="books.html">Lover</a></li>
-											<li><a class="list" href="books.html">Sister</a></li>
-											<li><a class="list" href="books.html">Brother</a></li>
-											<li><a class="list" href="books.html">Kids</a></li>
-											<li><a class="list" href="books.html">Parents</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Chocolate</a></li>
-											<li><a class="list" href="books.html">Mixed Fruit</a></li>
-											<li><a class="list" href="books.html">Butterscotch</a></li>
-											<li><a class="list" href="books.html">Strawberry</a></li>
-											<li><a class="list" href="books.html">Vanilla</a></li>
-											<li><a class="list" href="books.html">Eggless Cakes</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3">
-										<h4>By Theme</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">Heart shaped</a></li>
-											<li><a class="list" href="books.html">Cartoon Cakes</a></li>
-											<li><a class="list" href="books.html">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="books.html">Square shape</a></li>
-											<li><a class="list" href="books.html">Round shape</a></li>
-											<li><a class="list" href="books.html">Photo cakes</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3">
-										<h4>Weight</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="books.html">1 kG</a></li>
-											<li><a class="list" href="books.html">1.5 kG</a></li>
-											<li><a class="list" href="books.html">2 kG</a></li>
-											<li><a class="list" href="books.html">3 kG</a></li>
-											<li><a class="list" href="books.html">4 kG</a></li>
-											<li><a class="list" href="books.html">Large</a></li>
-										</ul>
-									</div>
-								</div>
-							</ul></li>
+							<ul class="submenumy dropdown-menu multi-column columns-1">
+								<li class="dropdown-submenu ">
+									<a id="select_type" tabindex="-1" href="#"  >文学</a>
+									<ul class="dropdown-menu">
+										<li><a class="list"  onclick="select(this)">文学理论</a></li>
+										<li><a class="list" onclick="select(this)">文学史</a></li>
+										<li><a class="list" onclick="select(this)">综合文作集</a></li>
+										<li><a class="list" onclick="select(this)">小说</a></li>
+										<li><a class="list" onclick="select(this)">传记/书信</a></li>
+										<li><a class="list" onclick="select(this)">散文随笔</a></li>
+										<li><a class="list" onclick="select(this)">诗歌词曲</a></li>
+										<li><a class="list" onclick="select(this)">世纪文学</a></li>
+										<li><a class="list" onclick="select(this)">报告文学</a></li>
+										<li><a class="list" onclick="select(this)">民间文学</a></li>
+										<li><a class="list" onclick="select(this)">戏曲/戏剧</a></li>
+										<li><a class="list" onclick="select(this)">汉语言文学</a></li>
+										<li><a class="list" onclick="select(this)">综合文作集</a></li>
+										<li><a class="list" onclick="select(this)">新闻传播</a></li>
+										<li><a class="list" onclick="select(this)">网络小说</a></li>
+										<li><a class="list" onclick="select(this)">世界名著</a></li>
+										<li><a class="list" onclick="select(this)">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#">计算机</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">基础知识</a></li>
+										<li><a class="list" onclick="select(this)">操作系统</a></li>
+										<li><a class="list" onclick="select(this)">数据库</a></li>
+										<li><a class="list" onclick="select(this)">编程语言</a></li>
+										<li><a class="list" onclick="select(this)">web技术</a></li>
+										<li><a class="list" onclick="select(this)">网页设计</a></li>
+										<li><a class="list" onclick="select(this)">网络/通信/安全</a></li>
+										<li><a class="list" onclick="select(this)">电子商务</a></li>
+										<li><a class="list" onclick="select(this)">多媒体</a></li>
+										<li><a class="list" onclick="select(this)">图形/图像</a></li>
+										<li><a class="list" onclick="select(this)">计算机辅助</a></li>
+										<li><a class="list" onclick="select(this)">软件技术/工程</a></li>
+										<li><a class="list" onclick="select(this)">3DS MAX</a></li>
+										<li><a class="list" onclick="select(this)">信息管理</a></li>
+										<li><a class="list" onclick="select(this)">计算机硬件</a></li>
+										<li><a class="list" onclick="select(this)">人工智能</a></li>
+										<li><a class="list" onclick="select(this)">办公/文字</a></li>
+										<li><a class="list" onclick="select(this)">等级/认证</a></li>
+										<li><a class="list" onclick="select(this)">Maya影视</a></li>
+										<li><a class="list" onclick="select(this)">AutoCAD</a></li>
+										<li><a class="list" onclick="select(this)">ERP技术</a></li>
+										<li><a class="list" onclick="select(this)">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >经管</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">理论/方法</a></li>
+										<li><a class="list" onclick="select(this)">财政金融</a></li>
+										<li><a class="list" onclick="select(this)">贸易经济</a></li>
+										<li><a class="list" onclick="select(this)">知识经济</a></li>
+										<li><a class="list" onclick="select(this)">经济/体制</a></li>
+										<li><a class="list" onclick="select(this)">市场营销</a></li>
+										<li><a class="list" onclick="select(this)">人力资源</a></li>
+										<li><a class="list" onclick="select(this)">财务管理</a></li>
+										<li><a class="list" onclick="select(this)">商业文秘</a></li>
+										<li><a class="list" onclick="select(this)">商务谈判</a></li>
+										<li><a class="list" onclick="select(this)">企划广告</a></li>
+										<li><a class="list" onclick="select(this)">公共关系</a></li>
+										<li><a class="list" onclick="select(this)">股票证券期货</a></li>
+										<li><a class="list" onclick="select(this)">餐饮/旅游</a></li>
+										<li><a class="list" onclick="select(this)">房地产/物业</a></li>
+										<li><a class="list" onclick="select(this)">工商管理</a></li>
+										<li><a class="list" onclick="select(this)">电子商务</a></li>
+										<li><a class="list" onclick="select(this)">物流管理</a></li>
+										<li><a class="list" onclick="select(this)">行政管理</a></li>
+										<li><a class="list" onclick="select(this)">经济学</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >外语</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">工具书</a></li>
+										<li><a class="list" onclick="select(this)">英语教材</a></li>
+										<li><a class="list" onclick="select(this)">剑桥商务</a></li>
+										<li><a class="list" onclick="select(this)">日语</a></li>
+										<li><a class="list" onclick="select(this)">国内考试</a></li>
+										<li><a class="list" onclick="select(this)">出国考试</a></li>
+										<li><a class="list" onclick="select(this)">专业读物</a></li>
+										<li><a class="list" onclick="select(this)">英语文学</a></li>
+										<li><a class="list" onclick="select(this)">其他语言</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >建筑</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">测绘</a></li>
+										<li><a class="list" onclick="select(this)">土木</a></li>
+										<li><a class="list" onclick="select(this)">力学</a></li>
+										<li><a class="list" onclick="select(this)">城市规划</a></li>
+										<li><a class="list" onclick="select(this)">设计</a></li>
+										<li><a class="list" onclick="select(this)">预算</a></li>
+										<li><a class="list" onclick="select(this)">环境</a></li>
+										<li><a class="list" onclick="select(this)">建筑材料</a></li>
+										<li><a class="list" onclick="select(this)">消防</a></li>
+										<li><a class="list" onclick="select(this)">路桥</a></li>
+										<li><a class="list" onclick="select(this)">给排水</a></li>
+										<li><a class="list" onclick="select(this)">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >法律</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">法学理论</a></li>
+										<li><a class="list" onclick="select(this)">中国法律</a></li>
+										<li><a class="list" onclick="select(this)">案例</a></li>
+										<li><a class="list" onclick="select(this)">中国司法制度</a></li>
+										<li><a class="list" onclick="select(this)">外国法律</a></li>
+										<li><a class="list" onclick="select(this)">国际法</a></li>
+										<li><a class="list" onclick="select(this)">日常生活与法律</a></li>
+										<li><a class="list" onclick="select(this)">普法教育</a></li>
+										<li><a class="list" onclick="select(this)">律师及资格考试</a></li>
+										<li><a class="list" onclick="select(this)">工具书</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >艺术</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">艺术理论</a></li>
+										<li><a class="list" onclick="select(this)">绘画</a></li>
+										<li><a class="list" onclick="select(this)">音乐</a></li>
+										<li><a class="list" onclick="select(this)">艺术设计</a></li>
+										<li><a class="list" onclick="select(this)">动漫/网游</a></li>
+										<li><a class="list" onclick="select(this)">其他</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >考试</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">研究生考试</a></li>
+										<li><a class="list" onclick="select(this)">公务员考试</a></li>
+										<li><a class="list" onclick="select(this)">自学考试</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >电子</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">单片机</a></li>
+										<li><a class="list" onclick="select(this)">电子信息</a></li>
+										<li><a class="list" onclick="select(this)">电气/电器</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >机械</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">机电一体化</a></li>
+										<li><a class="list" onclick="select(this)">机械制造</a></li>
+										<li><a class="list" onclick="select(this)">工程图学</a></li>
+										<li><a class="list" onclick="select(this)">工业技术</a></li>
+										<li><a class="list" onclick="select(this)">汽车</a></li>
+										<li><a class="list" onclick="select(this)">自动化</a></li>
+										<li><a class="list" onclick="select(this)">模具</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >生化</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">生物化学</a></li>
+										<li><a class="list" onclick="select(this)">医药学</a></li>
+										<li><a class="list" onclick="select(this)">化工</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >教育</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">心理学</a></li>
+										<li><a class="list" onclick="select(this)">哲学</a></li>
+										<li><a class="list" onclick="select(this)">教育学</a></li>
+										<li><a class="list" onclick="select(this)">思想政治</a></li>
+										<li><a class="list" onclick="select(this)">新闻传播</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a id="select_type" tabindex="-1" href="#"  >环境</a>
+									<ul class="dropdown-menu">
+										<li><a class="list" onclick="select(this)">环境</a></li>
+										<li><a class="list" onclick="select(this)">天文</a></li>
+										<li><a class="list" onclick="select(this)">地理</a></li>
+									</ul>
+								</li>
+							</ul>						
+						</li>
 				</div>
 				<!--//navbar-header-->
 			</nav>
@@ -172,13 +314,13 @@
 											<h4 style="margin-left: 10px;">查找类别</h4>
 											<ul class="multi-column-dropdown" id="parent">
 												<li class="searchtype"><a class="list"
-													style="margin-left: 10px;" onclick="select(this)">作者</a></li>
+													style="margin-left: 10px;" onclick="select1(this)">作者</a></li>
 												<li class="searchtype"><a class="list"
-													style="margin-left: 10px;" onclick="select(this)">书名</a></li>
+													style="margin-left: 10px;" onclick="select1(this)">书名</a></li>
 												<li class="searchtype"><a class="list"
-													style="margin-left: 10px;" onclick="select(this)">出版社</a></li>
+													style="margin-left: 10px;" onclick="select1(this)">出版社</a></li>
 												<li class="searchtype"><a class="list"
-													style="margin-left: 10px;" onclick="select(this)">书籍编号</a></li>
+													style="margin-left: 10px;" onclick="select1(this)">书籍编号</a></li>
 											</ul>
 										</div>
 									</ul>
@@ -228,6 +370,7 @@
 		</div>
 	</div>
 </body>
+
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="js/Login.js"></script>
 <script type="text/javascript" src="js/Logout.js"></script>

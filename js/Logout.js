@@ -20,6 +20,7 @@ function Logout() {
 	delCookie("uname");
 	delCookie("email");
 	delCookie("password");
+	window.location.href="index.html";
 }
 // 删除cookie
 function delCookie(name) {// 为cookie name

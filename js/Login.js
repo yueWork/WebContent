@@ -89,7 +89,6 @@ function Login() {
 							+ '</ul>' + '</div>' + '</li>';
 						
 						$("#loginBox").html(html2);
-						window.location.href = "index.html";
 					} else {
 						$("#msg").html(msg);
 						console.log(msg);
