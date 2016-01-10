@@ -150,7 +150,7 @@ function click() {
 						}
 
 					} else {
-						alert("无此类书籍");
+						alert("最后一页！");
 						page--;
 					}
 

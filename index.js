@@ -21,8 +21,8 @@ function select1(dom) {
 //	console.log("select"+search_type);
 	
 	var select=$(dom).html();
-	console.log(select);
-	
+	console.log("select:"+select);
+	search_type = select;
 	var html=select+"<b class=\"caret\"></b>";
 	$("#selectsubject").html(html);
 	
