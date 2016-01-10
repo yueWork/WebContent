@@ -113,4 +113,28 @@
     <servlet-name>loadShopCart</servlet-name>
     <url-pattern>/loadShopCart</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>checkShopCart</servlet-name>
+    <servlet-class>com.org.checkShopCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkShopCart</servlet-name>
+    <url-pattern>/checkShopCart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>changeCart</servlet-name>
+    <servlet-class>com.org.changeCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changeCart</servlet-name>
+    <url-pattern>/changeCart</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>deleteCartThing</servlet-name>
+    <servlet-class>com.org.deleteCartThing</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteCartThing</servlet-name>
+    <url-pattern>/deleteCartThing</url-pattern>
+  </servlet-mapping>
 </web-app>

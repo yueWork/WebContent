@@ -1,4 +1,4 @@
-var uid="4b38b561723c4a01b978b72bc785ef06";
+//var ="4b38b561723c4a01b978b72bc785ef06";
 var gender;
 var userinfo="";
 var pagenum=0;
@@ -81,7 +81,7 @@ function updateUserInfo() {
 	}
 	if(flag[0]&&flag[1]){
 		$.ajax({
-			url : "/BookStore/UpdateUserInfo?uid=" + uid+"&uname="+userInfoSet[0]+"&phone="+userInfoSet[1]+
+			url : "/BookStore/UpdateUserInfo?uid=" + User_uid+"&uname="+userInfoSet[0]+"&phone="+userInfoSet[1]+
 			"&password="+userInfoSet[2]+"&age="+userInfoSet[4]+"&sex="+sex+"&portait="+userInfoSet[5],
 			contentType : "text/json;charset=utf-8",
 			type : "GET",
@@ -111,7 +111,7 @@ function loadOrder() {
 	$("#order2").show();
 	
 	$.ajax({
-		url : "/BookStore/OrderInfo?uid=" + uid+"&pagenum="+pagenum,
+		url : "/BookStore/OrderInfo?uid=" + User_uid+"&pagenum="+pagenum,
 		contentType : "text/json;charset=utf-8",
 		type : "GET",
 		success : function(data) {
@@ -119,10 +119,15 @@ function loadOrder() {
 			var bname;
 			var oid;
 			var price;
+			var type;
+			var cover;
 			var dateid="#date";
 			var bnameid="#bname";
 			var onoid="#orderno";
 			var priceid="#price";
+			var typeid="#type";
+			var coverid="#cover";
+			var priceagaid=priceid;
 			console.log("sta:"+data.status);
 			if(data.next=="0"){
 				document.getElementById("next").onclick=null;
@@ -140,11 +145,18 @@ function loadOrder() {
 					date=result[i].time;
 					bname=result[i].bname;
 					oid=result[i].oid;
-					price=result[i].price;	
+					price=result[i].price;
+					cover=result[i].cover;
+					type=result[i].children+" < "+result[i].parent;
+					cover
 					$(dateid+i).html(date);
 					$(bnameid+i).html(bname);
 					$(onoid+i).html(oid);
-					$(priceid+i).html(price);														
+					$(priceid+i).html(price);
+					$(priceid+i+i).html(price);
+					console.log(priceid+i+i);
+					$(typeid+i).html(type);
+					$(coverid+i).attr("src",cover);
 				}
 				for(;i<3;i++){
 					var order="#order"+i;
@@ -185,7 +197,7 @@ $(document).ready(function() {
 	
 	loadOrder();
 	$.ajax({
-		url : "/BookStore/UserInfo?uid=" + uid,
+		url : "/BookStore/UserInfo?uid=" + User_uid,
 		contentType : "text/json;charset=utf-8",
 		type : "GET",
 		success : function(data) {

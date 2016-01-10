@@ -1,6 +1,5 @@
 var types;
 $(document).ready(function check() {
-
 	$("p").each(function() {
 		console.log("ppp");
 		$(this).click(function() {
@@ -14,6 +13,7 @@ function click() {
 	$("#type a").on("click", function() {
 		var p = $(this).html();// 这里是获取点击某一个<a>标签的html值
 		var reg = /<[^>]+>/ig;
+		console.log("p:"+p);
 		types = p.replace(reg, "");
 		console.log(types);
 	});
