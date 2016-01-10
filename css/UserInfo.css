@@ -106,3 +106,40 @@
 .awarning {
 	color: #E74C3C;
 }
+.spanPage{
+	display: inline-block;
+	line-height: 18px; 
+	padding: 0px 6px; 
+	border: 1px solid rgb(232, 232, 232); 
+	margin-right: 10px; 
+	color: rgb(232, 232, 232);
+}
+.prearrow{
+	display:inline-block;
+	width:0;height:0;
+	border-top-style:solid;
+	border-top-color:transparent;
+	border-top-width:4px;
+	border-right-style:solid;
+	border-right-color:#6C6C6C;
+	
+	border-right-width:4px;
+	border-bottom-style:solid;
+	border-bottom-color:transparent;
+	border-bottom-width:4px;
+}
+.nextarrow{
+	display:inline-block;
+	width:0;
+	height:0;
+	border-top-style:solid;
+	border-top-color:transparent;
+	border-top-width:4px;
+	border-left-style:solid;
+	border-left-color:#ff6000;
+	border-left-width:4px;
+	border-bottom-style:solid;
+	border-bottom-color:transparent;
+	border-bottom-width:4px;
+	margin-left:8px;
+}

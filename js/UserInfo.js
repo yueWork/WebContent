@@ -16,8 +16,7 @@ function upload(obj1) {
         secureuri :false,
         fileElementId :'fileToUpload',//file控件id
         dataType : 'json',
-        success : function (data, status){
-        	
+        success : function (data, status){        	
         	alert("success");        	
         	var index=data.indexOf("{");
      	    var end=data.length-1;
@@ -125,6 +124,11 @@ function loadOrder() {
 			var onoid="#orderno";
 			var priceid="#price";
 			console.log("sta:"+data.status);
+			if(data.next=="0"){
+				document.getElementById("next").onclick=null;
+				$("#next").children(".nextarrow").attr("style", "border-left-color:#6C6C6C;");
+				$("#nextpage").attr("style","color: rgb(232, 232, 232);");
+			}
 			if(data.status=="0"){
 				$("#order0").hide();
 				$("#order1").hide();
@@ -154,15 +158,31 @@ function next() {
 	pagenum++;
 	console.log(pagenum);
 	loadOrder();
+	document.getElementById("pre").setAttribute("onclick", "pre()");
+	$("#pre").children(".prearrow").attr("style", "border-right-color:#ff6000;");
+	
 }
 function pre() {
 	if(pagenum>0){
 		pagenum--;
 		console.log(pagenum);
+		$("#next").children(".nextarrow").attr("style", "border-left-color:#ff6000;");
+		$("#nextpage").attr("style","");
+		document.getElementById("next").setAttribute("onclick", "next()");
 		loadOrder();
+		if(pagenum==0){
+			document.getElementById("pre").onclick=null;
+			$("#pre").children(".prearrow").attr("style", "border-right-color:#6C6C6C;");
+		}
+	}else{
+		document.getElementById("pre").onclick=null;
+		$("#pre").children(".prearrow").attr("style", "border-right-color:#6C6C6C;");
 	}
 }
 $(document).ready(function() {
+	
+	
+	
 	loadOrder();
 	$.ajax({
 		url : "/BookStore/UserInfo?uid=" + uid,
