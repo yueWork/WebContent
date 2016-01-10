@@ -33,6 +33,14 @@
     <servlet-name>Search</servlet-name>
     <url-pattern>/Search</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <servlet-name>SearchByType</servlet-name>
+    <servlet-class>com.org.SearchByType</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchByType</servlet-name>
+    <url-pattern>/SearchByType</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>Books</servlet-name>
     <servlet-class>com.org.Books</servlet-class>
@@ -96,7 +104,6 @@
   <servlet-mapping>
     <servlet-name>Connect</servlet-name>
     <url-pattern>/Connect</url-pattern>
-
   </servlet-mapping>
   <servlet>
     <servlet-name>loadShopCart</servlet-name>

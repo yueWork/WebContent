@@ -133,35 +133,35 @@ function hideURLbar() {
 			</nav>
 			<div class="header-info">
 				<div class="header-right login">
-					<a href="#"><span class="glyphicon glyphicon-user"
-						aria-hidden="true"></span> </a>
-					<div id="loginBox" style="right: 16%;">
+					<a href="#" id="user" style="right: 150px; position: absolute;"><span
+						class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<div id="loginBox" style="right: 130px; top: 54px;">
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
-									<label for="email"> Email Address </label> <input type="text"
+									<label for="email">Email Address</label> <input type="text"
 										name="email" id="email">
 								</fieldset>
 								<fieldset>
-									<label for="password"> Password </label> <input type="password"
+									<label for="password">Password</label> <input type="password"
 										name="password" id="password">
 								</fieldset>
-								<input type="submit" id="login" value="Sign in"> <label
-									for="checkbox"> <input type="checkbox" id="checkbox">
-									<i>Remember me</i>
-								</label>
+								<input type="button" id="login" value="Sign in"
+									onClick="Login()"> <label for="checkbox"><input
+									type="checkbox" id="checkbox"> <i>Remember me</i><a
+									id=msg></a></label>
 							</fieldset>
 							<p>
 								New User ? <a class="sign" href="account.html">Sign Up</a> <span><a
-									href="#">Forgot your password?</a> </span>
+									href="#">Forgot your password?</a></span>
 							</p>
 						</form>
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#"><span class="glyphicon glyphicon-shopping-cart"
-						aria-hidden="true"></span> </a>
-					<div class="cart-box" style="right: 10.5%;">
+					<a href="#" style="right: 100px; position: absolute;"><span
+						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box" style="right: 75px; top: 54px;">
 						<h4>
 							<a href="checkout.html"> <span class="simpleCart_total">
 									$0.00 </span> (<span id="simpleCart_quantity"
@@ -352,7 +352,7 @@ function hideURLbar() {
 								<a href="#"><p>文学理论</p> </a> 
 								<a href="#"><p>文学史</p> </a> 
 								<a href="#"><p>综合文作集</p> </a>
-								<a href="#"><p>小说</p> </a>  
+								<a ><p >小说</p> </a>  
 								<a href="#"><p>传记/书信</p> </a> <a href="#"><p>散文随笔</p> </a> <a
 									href="#"><p>诗歌词曲</p> </a> <a href="#"><p>世纪文学</p> </a> <a
 									href="#"><p>报告文学</p> </a> <a href="#"><p>民间文学</p> </a> <a
@@ -370,7 +370,7 @@ function hideURLbar() {
 							</ul>
 							<div class="clearfix"></div>
 							<div class="single-bottom">
-								<a href="#">基础知识</a> <a href="#"><p>操作系统</p> </a> <a
+								<a href="#"><p>基础知识</p></a> <a href="#"><p>操作系统</p> </a> <a
 									href="#"><p>数据库</p> </a> <a href="#"><p>编程语言</p> </a> <a
 									href="#"><p>web技术</p> </a> <a href="#"><p>网页设计</p> </a> <a
 									href="#"><p>电子商务</p> </a> <a href="#"><p>多媒体</p> </a> <a
@@ -1001,5 +1001,6 @@ function hideURLbar() {
 <script type="text/javascript" src="js/Logout.js"></script>
 <script type="text/javascript" src="js/books.js"></script>
 <script type="text/javascript" src="js/addcart.js"></script>
+<script type="text/javascript" src="js/SearchByType.js"></script>
 
 </html>

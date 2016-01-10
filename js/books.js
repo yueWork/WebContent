@@ -105,27 +105,9 @@ function books() {
 			}
 		}
 		});
-//	click();
+
 }
 $(document).ready(books());
-function click(){
-	var type;
-	$("#type a").on("click",function(){
-	       var p =$(this).html();//这里是获取点击某一个<a>标签的html值
-	       console.log(p);
-	       var reg = /<[^>]+>/ig;
-	       type = p.replace(reg,"");
-	       console.log(type);		
-	  });
-	$.ajax({
-		url :  "/BookStore/Books?type=" + type ,
-		contentType : "text/json;charset=utf-8",
-		type : "POST",
-		success : function(data) {
-			
-		}
-	});
-}
 function addcartBooks(dom){
 	var span=$(dom).parent().parent().parent().find(".product-img  .b-wrapper h4 span");
 	var index=span.html();
