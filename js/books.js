@@ -12,6 +12,17 @@ function GetRequest() {
 	}
 	return theRequest;
 }
+var pageNum=0;
+function Next() {
+	pageNum++;
+	console.log(pageNum);
+}
+function Pre() {
+	if(pageNum>0){
+		pageNum--;
+		console.log(pageNum);
+	}
+}
 function books() {
 	console.log("books.html.test");
 	var Request = new Object();
@@ -21,13 +32,13 @@ function books() {
 	for(var i=0;i<num;i++){
 		var temp = "bid"+i;
 		bids[i] = Request[temp];
-		console.log(bids[i]);
+//		console.log(bids[i]);
 	}
-	var url = "/BookStore/Books?num=" + num;
+	var url = "/BookStore/Books?pageNum="+pageNum+"&num=" + num;
 	for (var i = 0; i < num; i++) {
 		url = url + "&bid" + i + "=" + bids[i];
 	}
-	console.log(url);
+//	console.log(url);
 	$.ajax({
 		url : url,
 		contentType : "text/json;charset=utf-8",
@@ -36,9 +47,9 @@ function books() {
 			var msg = data.msg;
 			var state = data.state;
 			var count = data.count;
-			console.log(msg);
-			console.log(state);
-			console.log("1234"+count);
+//			console.log(msg);
+//			console.log(state);
+//			console.log("1234"+count);
 			if(state == "0"){
 				var i=0
 				for(i;i<count;i++){
@@ -56,8 +67,8 @@ function books() {
 				}
 				for(i;i<6;i++){
 					var temp = "book" + i;
-					console.log(temp)
-					$("#"+temp).html("");
+//					console.log(temp)
+					$("#"+temp).hide();
 				}
 				
 			}else{
