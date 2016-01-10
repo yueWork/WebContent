@@ -185,8 +185,7 @@ function hideURLbar() {
 		<div class="container">
 			<h2>书籍</h2>
 			<div class="col-md-9 product-model-sec">
-				<div class="product-grid">
-					<!-- <a href="single.html"> -->
+				<div id="book0" class="product-grid">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -205,14 +204,13 @@ function hideURLbar() {
 						<div class="product-info-cust prt_name">
 							<h4 id="bookName0">Product #1</h4>
 							<span id="price0" class="item_price" id="bookPrice1">$2000.00</span> 
-							<p type="text" class="item_quantity" id="counter0"></p>
+							<p class="item_quantity" id="counter0"></p>
 							<input type="button" class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
-					<a href="single.html">
+				<div id="book1" class="product-grid">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -236,7 +234,7 @@ function hideURLbar() {
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
+				<div id="book2" class="product-grid">
 					<a href="single.html">
 						<div class="more-product">
 							<span> </span>
@@ -246,7 +244,7 @@ function hideURLbar() {
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
-									<a id="bid2" style="visibility: hidden;"></a>
+									<span id="bid2" style="visibility: hidden;"></span>
 								</h4>
 							</div>
 						</div>
@@ -261,8 +259,7 @@ function hideURLbar() {
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
-					<a href="single.html">
+				<div id="book3" class="product-grid">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -271,7 +268,7 @@ function hideURLbar() {
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
-									<a id="bid3" style="visibility: hidden;"></a>
+									<span id="bid3" style="visibility: hidden;"></span>
 								</h4>
 							</div>
 						</div>
@@ -279,14 +276,14 @@ function hideURLbar() {
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
 							<h4 id="bookName3">Product #4</h4>
-							<span id="price3" class="item_price">$2000.00</span> <p
-								class="item_quantity" id="counter3"></p> <input type="button"
+							<span id="price3" class="item_price">$2000.00</span> 
+							<p class="item_quantity" id="counter3"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
+				<div id="book4" class="product-grid">
 					<a href="single.html">
 						<div class="more-product">
 							<span> </span>
@@ -296,7 +293,7 @@ function hideURLbar() {
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
-									<a id="bid4" style="visibility: hidden;"></a>
+									<span id="bid4" style="visibility: hidden;"></span>
 								</h4>
 							</div>
 						</div>
@@ -305,15 +302,14 @@ function hideURLbar() {
 						<div class="product-info-cust prt_name">
 							<h4 id="bookName4">Product #5</h4>
 							<span id="price4" class="item_price">$2000.00</span> 
-							<p
-								class="item_quantity" id="counter4"></p> <input type="button"
+							<p class="item_quantity" id="counter4"></p> 
+							<input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
-				<div class="product-grid">
-					<a href="single.html">
+				<div id="book5" class="product-grid">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -322,7 +318,7 @@ function hideURLbar() {
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
 									<button>查看</button>
-									<a id="bid5" style="visibility: hidden;"></a>
+									<span id="bid5" style="visibility: hidden;"></span>
 								</h4>
 							</div>
 						</div>
@@ -331,8 +327,7 @@ function hideURLbar() {
 						<div class="product-info-cust prt_name">
 							<h4 id="bookName5">Product #6</h4>
 							<span id="price5" class="item_price">$2000.00</span> 
-							<p
-								class="item_quantity" id="counter5"></p> <input type="button"
+							<p class="item_quantity" id="counter5"></p> <input type="button"
 								class="item_add items" value="添加到购物车">
 							<div class="clearfix"></div>
 						</div>
@@ -341,7 +336,7 @@ function hideURLbar() {
 			</div>
 			<div class="col-md-3 rsidebar span_1_of_left">
 				<section class="sky-form">
-					<div class="product_right">
+					<div id="type" class="product_right">
 						<h4 class="m_2">
 							<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>目录
 						</h4>
@@ -354,9 +349,11 @@ function hideURLbar() {
 							</ul>
 							<div class="clearfix"></div>
 							<div class="single-bottom">
-								<a href="#"><p>文学理论</p> </a> <a href="#"><p>文学史</p> </a> <a
-									href="#"><p>综合文作集</p> </a> <a href="#"><p>小说</p> </a> <a
-									href="#"><p>传记/书信</p> </a> <a href="#"><p>散文随笔</p> </a> <a
+								<a href="#"><p>文学理论</p> </a> 
+								<a href="#"><p>文学史</p> </a> 
+								<a href="#"><p>综合文作集</p> </a>
+								<a href="#"><p>小说</p> </a>  
+								<a href="#"><p>传记/书信</p> </a> <a href="#"><p>散文随笔</p> </a> <a
 									href="#"><p>诗歌词曲</p> </a> <a href="#"><p>世纪文学</p> </a> <a
 									href="#"><p>报告文学</p> </a> <a href="#"><p>民间文学</p> </a> <a
 									href="#"><p>戏曲/戏剧</p> </a> <a href="#"><p>汉语言文学</p> </a> <a
@@ -373,7 +370,7 @@ function hideURLbar() {
 							</ul>
 							<div class="clearfix"></div>
 							<div class="single-bottom">
-								<a href="#"><p>基础知识</p> </a> <a href="#"><p>操作系统</p> </a> <a
+								<a href="#">基础知识</a> <a href="#"><p>操作系统</p> </a> <a
 									href="#"><p>数据库</p> </a> <a href="#"><p>编程语言</p> </a> <a
 									href="#"><p>web技术</p> </a> <a href="#"><p>网页设计</p> </a> <a
 									href="#"><p>电子商务</p> </a> <a href="#"><p>多媒体</p> </a> <a

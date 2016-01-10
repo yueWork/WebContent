@@ -40,8 +40,8 @@ function books() {
 			console.log(state);
 			console.log("1234"+count);
 			if(state == "0"){
-				
-				for(var i=0;i<count;i++){
+				var i=0
+				for(i;i<count;i++){
 					var temp1 = "image" + i;
 					var temp2 = "bookName" + i;
 					var temp3 = "price" + i;
@@ -49,10 +49,15 @@ function books() {
 					var temp5 = "counter" + i;
 					document.getElementById(temp1).src = (data.books)[i].cover;
 //					document.getElementById(temp2).
-					$("#"+temp2).html((data.books)[i].bname+"著");
-					$("#"+temp3).html((data.books)[i].price+"¥");
+					$("#"+temp2).html((data.books)[i].bname+" 著");
+					$("#"+temp3).html((data.books)[i].price+" ¥");
 					$("#"+temp4).html((data.books)[i].bid);
 					$("#"+temp5).html((data.books)[i].counter);
+				}
+				for(i;i<6;i++){
+					var temp = "book" + i;
+					console.log(temp)
+					$("#"+temp).html("");
 				}
 				
 			}else{
@@ -60,5 +65,24 @@ function books() {
 			}
 		}
 		});
+	click();
 }
 $(document).ready(books());
+function click(){
+	var type;
+	$("#type a").on("click",function(){
+	       var p =$(this).html();//这里是获取点击某一个<a>标签的html值
+	       console.log(p);
+	       var reg = /<[^>]+>/ig;
+	       type = p.replace(reg,"");
+	       console.log(type);		
+	  });
+	$.ajax({
+		url :  "/BookStore/Books?type=" + type ,
+		contentType : "text/json;charset=utf-8",
+		type : "POST",
+		success : function(data) {
+			
+		}
+	});
+}
