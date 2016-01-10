@@ -1,17 +1,6 @@
-function Single(dom){
-	console.log("single.html.test");
-//	var Request = new Object();
-//	Request = GetRequest();
-//	var bid = decodeURI(Request["bid"]);
-	var a=$(dom).parent().parent().find("span");
-	var bid=a.html();
-	bid=1;
-	console.log("a:"+bid);
-	window.location.href = "single.html?bid="+bid;
-//	window.open()
-	
-}
+
 $(document).ready(function() {
+//	var bid=1;
 	var Request = new Object();
 	Request = GetRequest();
 	var bid = Request["bid"];
