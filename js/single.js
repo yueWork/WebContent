@@ -1,8 +1,21 @@
-
+function GetRequest1() {
+// var url =
+// unescape(encodeURI(window.parent.location.search).replace(/\\\\u/g,'%u'));
+	var url = location.search; // 获取url中"?"符后的字串
+	var theRequest = new Object();
+	if (url.indexOf("?") != -1) {
+		var str = url.substr(1);
+		strs = str.split("&");
+		for (var i = 0; i < strs.length; i++) {
+			theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+		}
+	}
+	return theRequest;
+}
 $(document).ready(function() {
 //	var bid=1;
 	var Request = new Object();
-	Request = GetRequest();
+	Request = GetRequest1();
 	var bid = Request["bid"];
 //	var bid=1;
 	$.ajax({
@@ -42,6 +55,7 @@ $(document).ready(function() {
 					console.log(Price);
 					$("#binstruction").html(Instruction);
 					console.log(Instruction);
+					document.getElementById("book_image").src = Cover;
 				}
 	})
 })

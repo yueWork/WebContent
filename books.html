@@ -23,8 +23,8 @@ function hideURLbar() {
 	media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/account.css" type="text/css" rel="stylesheet"
-	media="all">
+<link href="css/account.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/UserInfo.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery.min.js">
 	
@@ -218,7 +218,7 @@ function hideURLbar() {
 							<img id="image1" src="images/m2.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
+									<button onclick="Single(this)">查看</button>
 									<span id="bid1" style="visibility: hidden;"></span>
 								</h4>
 							</div>
@@ -235,7 +235,6 @@ function hideURLbar() {
 					</div>
 				</div>
 				<div id="book2" class="product-grid">
-					<a href="single.html">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -243,7 +242,7 @@ function hideURLbar() {
 							<img id="image2" src="images/m3.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
+									<button onclick="Single(this)">查看</button>
 									<span id="bid2" style="visibility: hidden;"></span>
 								</h4>
 							</div>
@@ -267,7 +266,7 @@ function hideURLbar() {
 							<img id="image3" src="images/m4.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
+									<button onclick="Single(this)">查看</button>
 									<span id="bid3" style="visibility: hidden;"></span>
 								</h4>
 							</div>
@@ -284,7 +283,6 @@ function hideURLbar() {
 					</div>
 				</div>
 				<div id="book4" class="product-grid">
-					<a href="single.html">
 						<div class="more-product">
 							<span> </span>
 						</div>
@@ -292,7 +290,7 @@ function hideURLbar() {
 							<img id="image4" src="images/m5.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
+									<button onclick="Single(this)">查看</button>
 									<span id="bid4" style="visibility: hidden;"></span>
 								</h4>
 							</div>
@@ -317,7 +315,7 @@ function hideURLbar() {
 							<img id="image5" src="images/m6.png" class="img-responsive" alt="" />
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看</button>
+									<button onclick="Single(this)">查看</button>
 									<span id="bid5" style="visibility: hidden;"></span>
 								</h4>
 							</div>
@@ -959,13 +957,13 @@ function hideURLbar() {
 	 <td style="text-align: center;">
 	 	<div data-reactid=".0.3.1.1.0" style="margin-left: auto;margin-right: auto;margin-bottom: 20px;">
 						<div data-reactid=".0.3.1.1.0.0">
-							<span style="display: inline-block; line-height: 18px; padding: 0px 6px; border: 1px solid rgb(232, 232, 232); margin-right: 10px; color: rgb(232, 232, 232);" class="tp-common-btn    " data-page="0" data-disable="true" data-reactid=".0.3.1.1.0.0.0" onclick="Pre()">
-								<span style="display:inline-block;width:0;height:0;border-top-style:solid;border-top-color:transparent;border-top-width:4px;border-right-style:solid;border-right-color:#6C6C6C;border-right-width:4px;border-bottom-style:solid;border-bottom-color:transparent;border-bottom-width:4px;" data-reactid=".0.3.1.1.0.0.0.0">
+							<span class="tp-common-btn spanPage" data-page="0" data-disable="true" data-reactid=".0.3.1.1.0.0.0" id="pre">
+								<span class="prearrow" data-reactid=".0.3.1.1.0.0.0.0">
 								</span>
 							</span>
-							<span style="display:inline-block;line-height:18px;padding:0  6px;border-width:1px;border-style:solid;border-color:#E8E8E8;:hover:[object Object];" class="tp-common-btn    " data-page="2" data-disable="false" data-reactid=".0.3.1.1.0.0.1">
-							<span data-reactid=".0.3.1.1.0.0.1.0" onclick="Next()">下一页</span>
-							<span style="display:inline-block;width:0;height:0;border-top-style:solid;border-top-color:transparent;border-top-width:4px;border-left-style:solid;border-left-color:#ff6000;border-left-width:4px;border-bottom-style:solid;border-bottom-color:transparent;border-bottom-width:4px;margin-left:8px;" data-reactid=".0.3.1.1.0.0.1.1">
+							<span onclick="Next()" id="next" style="display:inline-block;line-height:18px;padding:0  6px;border-width:1px;border-style:solid;border-color:#E8E8E8;:hover:[object Object];" class="tp-common-btn    " data-page="2" data-disable="true" data-reactid=".0.3.1.1.0.0.1">
+							<span data-reactid=".0.3.1.1.0.0.1.0" id="nextpage">下一页</span>
+							<span class="nextarrow" data-reactid=".0.3.1.1.0.0.1.1">
 							</span></span></div></div>
 							
 	 </td>

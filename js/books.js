@@ -16,12 +16,27 @@ var pageNum=0;
 function Next() {
 	pageNum++;
 	console.log(pageNum);
+	document.getElementById("pre").setAttribute("onclick", "Pre()");
+	$("#pre").children(".prearrow").attr("style", "border-right-color:#ff6000;");
+	books();
 }
 function Pre() {
 	if(pageNum>0){
 		pageNum--;
 		console.log(pageNum);
+		$("#next").children(".nextarrow").attr("style", "border-left-color:#ff6000;");
+		$("#nextpage").attr("style","");
+		document.getElementById("next").setAttribute("onclick", "Next()");
+		books();
+		if(pageNum==0){
+			document.getElementById("pre").onclick=null;
+			$("#pre").children(".prearrow").attr("style", "border-right-color:#6C6C6C;");
+		}
+	}else{
+		document.getElementById("pre").onclick=null;
+		$("#pre").children(".prearrow").attr("style", "border-right-color:#6C6C6C;");
 	}
+	
 }
 function Single(dom){
 	console.log("single.html.test");
@@ -30,7 +45,6 @@ function Single(dom){
 //	var bid = decodeURI(Request["bid"]);
 	var a=$(dom).parent().parent().find("span");
 	var bid=a.html();
-	bid=1;
 	console.log("a:"+bid);
 	window.location.href = "single.html?bid="+bid;
 //	window.open()
@@ -45,13 +59,11 @@ function books() {
 	for(var i=0;i<num;i++){
 		var temp = "bid"+i;
 		bids[i] = Request[temp];
-//		console.log(bids[i]);
 	}
 	var url = "/BookStore/Books?pageNum="+pageNum+"&num=" + num;
 	for (var i = 0; i < num; i++) {
 		url = url + "&bid" + i + "=" + bids[i];
 	}
-//	console.log(url);
 	$.ajax({
 		url : url,
 		contentType : "text/json;charset=utf-8",
@@ -77,6 +89,10 @@ function books() {
 					$("#"+temp3).html((data.books)[i].price+" ¥");
 					$("#"+temp4).html((data.books)[i].bid);
 					$("#"+temp5).html((data.books)[i].counter);
+					var temp = "book" + i;
+//					console.log(temp)
+					$("#"+temp).show();
+					
 				}
 				for(i;i<6;i++){
 					var temp = "book" + i;
@@ -89,7 +105,7 @@ function books() {
 			}
 		}
 		});
-	click();
+//	click();
 }
 $(document).ready(books());
 function click(){
