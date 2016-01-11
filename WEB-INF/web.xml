@@ -146,4 +146,12 @@
     <servlet-name>deleteCartThing</servlet-name>
     <url-pattern>/deleteCartThing</url-pattern>
   </servlet-mapping>
+     <servlet>
+    <servlet-name>Confirm</servlet-name>
+    <servlet-class>com.org.Confirm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Confirm</servlet-name>
+    <url-pattern>/Confirm</url-pattern>
+  </servlet-mapping>
 </web-app>
