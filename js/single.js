@@ -61,6 +61,7 @@ $(document).ready(function() {
 					
 					
 					$("#bname").html(Bname);
+					$("#web_title").html(Bname);
 					console.log(Bname);
 					$("#bauthor").html("作者："+Author);
 					console.log(Author);
