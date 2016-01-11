@@ -3,9 +3,9 @@ body {
 }
 
 
-li {
+/* li {
     list-style:none;display:inline;
-}
+} */
 div#header {
 }
 h1 {
@@ -57,7 +57,7 @@ form.search {
     right: 110px;
 }
 
-ul#regions li {
+/* ul#regions li {
     position: relative;
     float: left;
     display: inline;
@@ -89,7 +89,7 @@ ul#regions a.regionmenu:hover {
 }
 ul#regions li ul.droplistul{
     visibility: hidden;
-}
+} */
 /*
 ul#regions li ul li a.droplist{
     display: block;
