@@ -32,6 +32,7 @@ function Search() {
 					url = url + "&bid" + i + "=" + (data.books)[i].bid;
 				}
 				console.log(url);
+//				console.log("u:"+url);
 				window.location.href = url;
 //				window.location.href = "books.html?cover="
 //						+ encodeURI((data.books)[0].cover);

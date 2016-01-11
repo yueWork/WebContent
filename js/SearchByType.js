@@ -86,7 +86,6 @@ function Pre() {
 	}
 }
 $(document).ready(function check() {
-
 	$("p").each(function() {
 		console.log("ppp");
 		$(this).click(function() {
@@ -98,7 +97,7 @@ $(document).ready(function check() {
 });
 
 function click() {
-	
+
 //	$("#type a").on("click", function() {
 //		var p = $(this).html();// 这里是获取点击某一个<a>标签的html值
 //		var reg = /<[^>]+>/ig;
@@ -106,6 +105,7 @@ function click() {
 //		console.log(types);
 //	});
 	flag1 = 1;
+
 	console.log("type:"+types);
 			$.ajax({
 				url : "/BookStore/SearchByType?pageNum="

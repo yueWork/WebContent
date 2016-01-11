@@ -129,12 +129,12 @@ function books() {
 		for (var i = 0; i < num; i++) {
 			url = url + "&bid" + i + "=" + bids[i];
 		}
+		console.log("url"+url);
 		flag = 1;
-		$
-				.ajax({
+		$.ajax({
 					url : url,
 					contentType : "text/json;charset=utf-8",
-					type : "POST",
+					type : "GET",
 					success : function(data) {
 						var msg = data.msg;
 						var state = data.state;
