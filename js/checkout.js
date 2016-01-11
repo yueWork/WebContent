@@ -89,4 +89,7 @@ function loadcartinfo() {
 		}
 	});
 }
+function submit(){
+	
+}
 $(document).ready(loadcartinfo())

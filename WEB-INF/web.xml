@@ -113,4 +113,12 @@
     <servlet-name>loadShopCart</servlet-name>
     <url-pattern>/loadShopCart</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <servlet-name>SubmitOrder</servlet-name>
+    <servlet-class>com.org.SubmitOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitOrder</servlet-name>
+    <url-pattern>/SubmitOrder</url-pattern>
+  </servlet-mapping>
 </web-app>
