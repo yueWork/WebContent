@@ -41,6 +41,7 @@ function change(dom) {
 	var id=$(dom).attr("id");
 	var bid="#bid"+id.replace("counter","");
 	var bidhtml=$(bid).html();
+	console.log("num:"+num);
 	$.ajax({
 		url : "/BookStore/changeCart?uid=" + User_uid+"&bid="+bidhtml+"&num="+num,
 		contentType : "text/json;charset=utf-8",
@@ -122,6 +123,8 @@ function check() {
 	var check="buyCheck";
 	var sum=0;
 	var header="#cart-header";
+	var flag=new Array();
+	
 	for(var i=0;i<3;i++){
 		var id=check+i;
 		if(document.getElementById(id).checked){
@@ -138,17 +141,23 @@ function check() {
 				contentType : "text/json;charset=utf-8",
 				type : "GET",
 				success : function(data) {
-					alert("结算成功");
-					
+//					alert("结算成功");
+					flag[i]=true;
 				},
 				error : function(data) {
-					alert("结算失败");
-					
+//					alert("结算失败");
+					flag[i]=false;
 				}
 			});
 		}
 	}
+	
 	alert("sum:"+sum);
+	if(flag[0]&&flag[1]&&flag[2]){
+		alert("结算成功");
+		window.location.href="/BookStore/checkout.html";
+		console.log("href:"+href);
+	}
 }
 function close(dom) {
 	console.log("test");
