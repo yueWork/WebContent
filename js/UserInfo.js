@@ -121,12 +121,14 @@ function loadOrder() {
 			var price;
 			var type;
 			var cover;
+			var counter;
 			var dateid="#date";
 			var bnameid="#bname";
 			var onoid="#orderno";
 			var priceid="#price";
 			var typeid="#type";
 			var coverid="#cover";
+			var counterid="#counter";
 			var priceagaid=priceid;
 			console.log("sta:"+data.status);
 			if(data.next=="0"){
@@ -148,12 +150,17 @@ function loadOrder() {
 					price=result[i].price;
 					cover=result[i].cover;
 					type=result[i].children+" < "+result[i].parent;
+					counter=result[i].counter;
+					console.log("counter:"+counter);
 					cover
 					$(dateid+i).html(date);
 					$(bnameid+i).html(bname);
 					$(onoid+i).html(oid);
 					$(priceid+i).html(price);
 					$(priceid+i+i).html(price);
+					console.log("counter1:"+$(counterid+i).html());
+					$(counterid+i).html(counter);
+					console.log("counter2:"+$(counterid+i).html());
 					console.log(priceid+i+i);
 					$(typeid+i).html(type);
 					$(coverid+i).attr("src",cover);
