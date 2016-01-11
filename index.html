@@ -23,6 +23,7 @@
 <link href="css/account.css" type="text/css" rel="stylesheet"
 	media="all">
 <link href="css/index.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/IndexStyle.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
@@ -277,17 +278,19 @@
 					</div>
 				</div>
 				<div class="header-right cart">
-					<a href="#" style="right: 100px; position: absolute;"><span
+					<a href="#" style="right: 100px; position: absolute;" onmouseover="allmoney()"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 					<div class="cart-box" style="right: 75px; top: 54px;">
 						<h4>
-							<a href="checkout.html"> <span class="simpleCart_total">
-									$0.00 </span> (<span id="simpleCart_quantity"
+							<a href="checkout.html"> 
+							<span class="simpleCart_total"  id="allmoney">
+									¥0.00 
+							</span> (<span id="simpleCart_quantity"
 								class="simpleCart_quantity"> 0 </span>)
 							</a>
 						</h4>
 						<p>
-							<a href="javascript:;" class="simpleCart_empty">Empty cart</a>
+							<a href="javascript:;" class="simpleCart_empty" onclick="deleteAll()">Empty cart</a>
 						</p>
 						<div class="clearfix"></div>
 					</div>
@@ -337,7 +340,19 @@
 				</form>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="container">
+=======
+		<div class="container" style="margin: 0px;padding: 0px;width: 100%;">
+			<div id="focus" >
+			<ul>
+				<li><img src="images/book1.jpg" alt="jquery商城焦点图效果"></li>
+				<li><img src="images/book2.jpg" alt="jquery商城焦点图代码"></li>
+				<li><img src="images/book3.jpg" alt="jquery商城焦点图源码"></li>
+				<li><img src="images/book4.jpg" alt="jquery商城焦点图源码"></li>
+			</ul>
+
+>>>>>>> origin/master
 		</div>
 	</div>
 	<!--//banner-->
@@ -369,6 +384,8 @@
 
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="js/Login.js"></script>
+<script type="text/javascript" src="js/deleteCart.js"></script>
 <script type="text/javascript" src="js/Logout.js"></script>
 <script type="text/javascript" src="js/Search.js"></script>
+<script type="text/javascript" src="js/indexRoll.js"></script>
 </html>

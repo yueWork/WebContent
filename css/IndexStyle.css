@@ -1,0 +1,115 @@
+body {
+    margin: 0px;
+}
+
+
+li {
+    list-style:none;display:inline;
+}
+div#header {
+}
+h1 {
+    font-size: 32px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    font-style: normal;
+    color: #FFFAFA;
+}
+h2 {
+    font-size: 18px;
+    color: #FFFAFA;
+}
+h3 {
+    font-size: 20px;
+    color: #FFFAFA;
+    font-family: 隶书;
+}
+div#footer {
+    margin: 0px auto;
+    background-image: url('footer.png');
+    text-align: center;
+    clear: both;
+}
+h3.manage {
+    /*top: 90px;
+    right: 20px;*/
+    color: #000000;
+    /*position: relative;*/
+}
+img#x {
+    background-position: right;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-image: url('header.png');
+    z-index: -1;
+    width: 1360px;
+    height: 121px;
+}
+h1.title {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+form.search {
+    position: absolute;
+    top: 54px;
+    right: 110px;
+}
+
+ul#regions li {
+    position: relative;
+    float: left;
+    display: inline;
+    width: 150px;
+    height: 20px;
+}
+
+
+ul#regions {
+    margin: 0px auto;
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #DCDCDC;
+    font-family: 宋体;
+    word-spacing: 3em;
+}
+ul#regions a.regionmenu{
+    background-image: url('../img/list.png');
+    background-repeat: no-repeat;
+    color: #DDDDDD;
+}
+ul#regions a.regionmenu:hover {
+    background-image: url('../img/listHover.png');
+    background-repeat: no-repeat;
+    color: #F5F5F5;
+}
+ul#regions li ul.droplistul{
+    visibility: hidden;
+}
+/*
+ul#regions li ul li a.droplist{
+    display: block;
+    position: relative;
+    width: 30px;
+    margin: 0px;
+    text-align:center;
+}
+*/
+
+#focus{width:100%;height:450px;overflow:hidden;position:relative;margin:0 auto;}
+#focus ul{height:450px;position:absolute;padding:0;}
+#focus ul li{float:left;width:25%;height:450px;overflow:hidden;position:relative;background:#000;}
+#focus ul li div#indexChart{position:absolute;overflow:hidden;width: 25%; height: 100%}
+#focus ul li div#indexMap{position:absolute;overflow:hidden;width: 100%; height: 100%}
+#focus ul li img{position:absolute;overflow:hidden;width: 100%; height: 100%}
+#focus .btnBg{position:absolute;width:1360px;height:20px;left:0;bottom:0;background:#000;}
+#focus .btn{position:absolute;width:780px;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
+#focus .btn span{display:inline-block;_display:inline;_zoom:1;width:25px;height:10px;_font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
+#focus .btn span.on{background:#fff;}
+#focus .preNext{width:45px;height:100px;position:absolute;top:150px;cursor:pointer;}
+#focus .pre{left:0;background:url(../images/pre.png) no-repeat 0 0;}
+#focus .next{right:0;background-position:right top;background:url(../images/next.png) no-repeat 0 0;}

@@ -153,5 +153,21 @@
   <servlet-mapping>
     <servlet-name>Confirm</servlet-name>
     <url-pattern>/Confirm</url-pattern>
+  <servlet-mapping>
+  <servlet>
+    <servlet-name>deleteAll</servlet-name>
+    <servlet-class>com.org.deleteAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteAll</servlet-name>
+    <url-pattern>/deleteAll</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>allMoney</servlet-name>
+    <servlet-class>com.org.allMoney</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>allMoney</servlet-name>
+    <url-pattern>/allMoney</url-pattern>
   </servlet-mapping>
 </web-app>

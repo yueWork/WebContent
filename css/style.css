@@ -349,7 +349,7 @@ input:focus {
     background-color: #fff;
     width: 14%;
     padding: 2em 1em 1em;
-    z-index: 99;
+    z-index: 199;
 }
 .cart-box h4 {
     font-size: 1.1em;
