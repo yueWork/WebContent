@@ -153,7 +153,7 @@
   <servlet-mapping>
     <servlet-name>Confirm</servlet-name>
     <url-pattern>/Confirm</url-pattern>
-  <servlet-mapping>
+  </servlet-mapping>
   <servlet>
     <servlet-name>deleteAll</servlet-name>
     <servlet-class>com.org.deleteAll</servlet-class>
