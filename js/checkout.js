@@ -117,10 +117,11 @@ function loadcartinfo() {
 }
 
 function submit(){
-	var price;
-	var quantity;
-	var bid;
-	
+	var price = new Array(3);
+	var quantity = new Array(3);
+	var bname = new Array(3);
+	var htmls = new Array(3);
+	var ht = "";
 	var check="buyCheck";
 	var total=0;
 	var sum=0;
@@ -135,38 +136,43 @@ function submit(){
 			console.log(temp);
 		}
 	}
+	
 	console.log("temp:"+temp);
 	if(temp > 0){
 		$("#modellog").modal();
 		for(var i=0;i<3;i++){
 			var id=check+i;
-			var htmls = "";
 			if(document.getElementById(id).checked){
-				htmls = htmls + "<table width=\"100%\";id=\"tb"+i+"\"style=\"border-bottom: 0px; color: #34495e;font-size:20px;\">"
+				price[i]=$("#price"+i).html()*1;
+				quantity[i]=$("#counter"+i).val()*1;
+				bname[i]=$("#bname"+i).html();
+				
+				htmls[i] = "<table width=\"100%\";id=\"tb"+i+"\"style=\"border-bottom: 0px; color: #34495e;font-size:20px;\">"
 				+"<tr>"
 					+"<td width=\"100\">书籍名称：</td>"
-					+"<td width:\"200\"; id=\"order_name"+i+"\">name</td>"
+					+"<td width:\"200\"; id=\"order_name"+i+"\">"+bname[i]+"</td>"
 				+"</tr>"
 				+"<tr>"
 					+"<td>单价：</td>"
-					+"<td id=\"order_price"+i+"\">price</td>"
+					+"<td id=\"order_price"+i+"\">"+price[i]+" ¥</td>"
 				+"</tr>"
 				+"<tr>"
 					+"<td>数量：</td>"
-					+"<td id=\"order_counter"+i+"\">counter</td>"
+					+"<td id=\"order_counter"+i+"\">"+quantity[i]+"本</td>"
 				+"</tr>"
 			+"</table>"
 			+"<hr/>";
-				$("#tables").html(htmls);
-				price=$("#price"+i).html()*1;
-				quantity=$("#counter"+i).val()*1;
-				bname=$("#bname"+i).html();
-				$("#order_name"+i).html(bname);
-				$("#order_price"+i).html(price);
-				$("#order_counter"+i).html(quantity);
-				sum+=price*quantity;
 				
+				
+				$("#tables").html(htmls[i]);
+
+				sum+=price[i]*quantity[i];
+				ht = ht + htmls[i];
+
+				$("#tables").html(ht);
+
 			}
+			
 			$("#sum").html(sum);
 	}
 	
